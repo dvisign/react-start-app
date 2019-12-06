@@ -3,27 +3,24 @@ import { NavLink } from 'react-router-dom';
 //import jQuery from 'jquery';
 class Nav extends Component {
   render() {
-    const activeStyle = {
-      color: '#ff2f92'
-    };
     return (
       <div id="mainNavs">
         <div id="fixNavs">
           <ul className="m_menu">
             <li>
-              <NavLink activeStyle={activeStyle} to={process.env.PUBLIC_URL+"/Main"}>Main</NavLink>
+              <NavLink to={"/printice/"}>Main</NavLink>
             </li>
             <li>
-              <NavLink activeStyle={activeStyle} to={process.env.PUBLIC_URL+"/About"}>About</NavLink>
+              <NavLink to={"/printice/About"}>About</NavLink>
             </li>
             <li>
-              <NavLink activeStyle={activeStyle} to={process.env.PUBLIC_URL+"/Print"}>Print</NavLink>
+              <NavLink to={"/printice/Print/print"}>Print</NavLink>
             </li>
             <li>
-              <NavLink activeStyle={activeStyle} to={process.env.PUBLIC_URL+"/Automation"}>Automation</NavLink>
+              <NavLink to={"/printice/Automation"}>Automation</NavLink>
             </li>
             <li>
-              <NavLink activeStyle={activeStyle} to={process.env.PUBLIC_URL+"/News"}>News</NavLink>
+              <NavLink to={"/printice/News"}>News</NavLink>
             </li>
           </ul>
         </div>
@@ -31,5 +28,5 @@ class Nav extends Component {
     )
   }
 }
-
+// process.env.PUBLIC_URL
 export default Nav;
