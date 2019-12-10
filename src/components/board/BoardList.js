@@ -1,63 +1,35 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom' 
 
 class BoardList extends Component {
   state = {
     category : "",
-    list : [],
-    test : ""
+    list : []
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.category !== nextProps.category) {
-      // console.log("update this props=> "+this.props.category)
-      // console.log("update next => " + nextProps.category)
-      this.getDataList(nextProps.category);
-      console.log("true")
-      return true
-    } else {
-      if (this.state.test === "") {
-        this.getDataList(nextProps.category);
-        console.log("true")
-        return true
-      } else {
-        console.log("false")
-        return false
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps !== prevState) {
+      return {
+        category : nextProps.list.category,
+        list : nextProps.list.boardList
       }
     }
   }
-  componentDidMount() {
-    console.log("did mount")
-    this.getDataList(this.props.category);
-  }
-  getDataList = (dataCate) => {
-    if (dataCate === "print") {
-      this.setState({
-        ...this.state,
-        test : "print"
-      })
-    } else {
-      this.setState({
-        ...this.state,
-        test : "order"
-      })
-    }
-  }
   render() {
-    console.log(this.state)
     return (
       <div>
-        <div>
-          {this.props.bo_table}게시판
-        </div>
-        <div>
-          {this.props.category}카테고리
-        </div>
-        {this.state.list.map((lists,i)=>(
-          <div key={i}>
-            <Link to={"/printice/Print/"+this.props.category+"/"+lists.wr_id}>{lists.wr_subject}</Link>
-          </div>
-        ))}
+        {
+          this.state.list.length === 0 ? (
+            <div>
+              게시글 없음
+            </div>
+          ) : (
+            this.state.list.map((lists, i)=>(
+              <div key={i}>
+                <Link to={"/printice/Print/"+this.state.category+"/"+lists.wr_id}>{lists.wr_subject}</Link>
+              </div>
+            ))
+          )
+        }
       </div>
     )
   }

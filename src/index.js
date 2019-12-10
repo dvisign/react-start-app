@@ -4,6 +4,9 @@ import Root from './client/Root';
 import * as serviceWorker from './serviceWorker';
 import 'react-app-polyfill/ie9'; // For IE 9-11 support
 import './css/base.scss';
+if (!window.Promise) {
+  window.Promise = Promise;
+}
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 

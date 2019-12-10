@@ -8,10 +8,15 @@ class BoardList extends Component {
     }
   }
   render() {
+    console.log(this.props.match)
     return (
       <div>
-        {this.props.bo_table}게시판
-        {this.props.category}카테고리 게시글 보기
+        <div>
+          {this.props.bo_table}게시판
+        </div>
+        <div>
+          {this.props.category}카테고리
+        </div>
       </div>
     )
   }
