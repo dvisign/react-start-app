@@ -1,0 +1,43 @@
+.sectionTitles {
+  font-size: 2.248rem;
+  font-weight: 400;
+  position: relative;
+  padding-top: 15px;
+}
+.sectionSubTitles {
+  font-size: 1.54rem;
+  font-weight: 400;
+}
+.sectionTitles::after {
+  position: absolute;
+  display: block;
+  content:" ";
+  width: 75px;
+  height: 4px;
+  background:#ffcc00;
+  left: 2px;
+  top: 0;
+}
+#mainPage {
+  #mainBanner {
+    position: relative;
+    img {
+      width:100%;
+    }
+    #bannerTitle {
+      color:#fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-30%);
+      .sectionTitles {
+        text-align: left;
+      }
+      .sectionSubTitles {
+        text-align: left;
+      }
+    }
+  }
+}

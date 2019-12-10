@@ -4,9 +4,9 @@ import Root from './client/Root';
 import * as serviceWorker from './serviceWorker';
 import 'react-app-polyfill/ie9'; // For IE 9-11 support
 import './css/base.scss';
-if (!window.Promise) {
-  window.Promise = Promise;
-}
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 

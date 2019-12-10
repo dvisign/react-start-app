@@ -61,7 +61,7 @@ class Print extends Component {
             component={props=><BoardList list={this.state} />}
           />
           <Route 
-            path={`${this.props.match.url}/:cate`} 
+            path={`${this.props.match.url}/:id`} 
             component={BoardView}
           />
         </Switch>

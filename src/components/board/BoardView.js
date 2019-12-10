@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class BoardList extends Component {
+class BoardView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,7 +8,7 @@ class BoardList extends Component {
     }
   }
   render() {
-    console.log(this.props.match)
+    console.log(this.props)
     return (
       <div>
         <div>
@@ -22,4 +22,4 @@ class BoardList extends Component {
   }
 }
 
-export default BoardList;
+export default BoardView;

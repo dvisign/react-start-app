@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "cross-env": "^6.0.3",
+    "mdbreact": "^4.23.1",
     "node-sass": "^4.13.0",
     "query-string": "^6.9.0",
     "react": "^16.12.0",
