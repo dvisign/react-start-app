@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from 'components/Nav';
+import Footer from 'components/Footer';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { Main, About, Print, Automation, News, NotFound } from 'route';
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Route component={NoMatchPage}/>
           </Switch>
         </div>
+        <Footer />
       </div>
     )
   }

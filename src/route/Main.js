@@ -1,12 +1,25 @@
 import React, { Component } from 'react'
-import "css/main.scss"
 import {MDBContainer} from 'mdbreact';
 import * as board from'service/board';
 import { NavLink } from 'react-router-dom';
+import Swiper from 'react-id-swiper';
+import GoogleMaps from 'components/GoogleMaps';
+// css, scss
+import "css/main.scss"
+import 'swiper/css/swiper.css'
+// img
 import print_1 from 'img/main/print/print_1.png';
 import print_2 from 'img/main/print/print_2.png';
 import print_3 from 'img/main/print/print_3.png';
 import print_4 from 'img/main/print/print_4.png';
+import auto_1 from 'img/main/auto/auto_1.png';
+import auto_2 from 'img/main/auto/auto_2.png';
+import auto_3 from 'img/main/auto/auto_3.png';
+import partner_1 from 'img/main/partners/logo_1.png';
+import partner_2 from 'img/main/partners/logo_2.png';
+import partner_3 from 'img/main/partners/logo_3.png';
+import partner_4 from 'img/main/partners/logo_4.png';
+import partner_5 from 'img/main/partners/logo_5.png';
 
 class Main extends Component {
   render() {
@@ -34,6 +47,40 @@ class Main extends Component {
           <MDBContainer>
             <AutoProducts/>
           </MDBContainer>
+        </section>
+        <section id="partners">
+          <MDBContainer>
+            <Partners 
+              partner={this.props}
+            />
+          </MDBContainer>
+        </section>
+        <section id="contact">
+          <MDBContainer>
+            <ul id="contactInfo" className="clear">
+              <li>
+                <div>
+                  <h2 className="sectionSubTitles">Contact<br/>Information</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2 className="sectionSubTitles">010. 9181. 4265</h2>
+                  <p><span>Tel. </span>032. 812. 6272<span>Fax. </span>032. 812. 6273</p>
+                  <p><span>Email. </span>printis001@hanmail.net</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>인천광역시 남동구 남동동로 33번길 10<br/> 2동 (154B 9L)</p>
+                  <p>2 dong, 10 Namdongdong-ro<br/>33beon-gil, Namdong-go,<br/>Inccheon, Republic of Korea</p>
+                </div>
+              </li>
+            </ul>
+          </MDBContainer>
+        </section>
+        <section id="locations">
+          <GoogleMaps />
         </section>
       </main>
     )
@@ -100,53 +147,136 @@ class NewsList extends Component {
     )
   }
 }
-class PrintProducts extends Component {
+function PrintProducts(state) {
   state = {
     printlist : [
       {
         "productImg":print_1,
-        "productSbuject":"인쇄장비"
+        "productSbuject":"인쇄장비",
+        "links": "/printice/Print/print/"
       },
       {
         "productImg":print_2,
-        "productSbuject":"라벨장비"
+        "productSbuject":"라벨장비",
+        "links": "/printice/Print/label/"
       },
       {
         "productImg":print_3,
-        "productSbuject":"제판장비"
+        "productSbuject":"제판장비",
+        "links": "/printice/Print/engraving/"
       },
       {
         "productImg":print_4,
-        "productSbuject":"건조장비"
+        "productSbuject":"건조장비",
+        "links": "/printice/Print/dry/"
       }
     ]
   }
-  render() {
-    return(
-      <div>
-        <ul id="printList" className="clear">
-        {this.state.printlist.map((printlists, i)=>(
-          <li key={i}>
+  return(
+    <div>
+      <ul id="printList" className="clear">
+      {state.printlist.map((printlists, i)=>(
+        <li key={i}>
+          <NavLink to={printlists.links}>
             <div className="productTitle">
               <h2 className="sectionSubTitles">{printlists.productSbuject}</h2>
             </div>
             <div id={"print_"+i} className="printThumbs">
               <img src={printlists.productImg} alt={"프린티스 "+printlists.productSbuject} />
             </div>
-          </li>
-        ))}
-        </ul>
-      </div>
+          </NavLink>
+        </li>
+      ))}
+      </ul>
+    </div>
     )
-  }
 }
-class AutoProducts extends Component {
-  render() {
-    return(
-      <div>
-        auto product
-      </div>
+function AutoProducts(state) {
+  state = {
+    autolist : [
+      {
+        "productImg":auto_1,
+        "productSbuject":"TOUCH 장비",
+        "links" : "/printice/Automation/"
+      },
+      {
+        "productImg":auto_2,
+        "productSbuject":"로보트자동화",
+        "links" : "/printice/Automation/"
+      },
+      {
+        "productImg":auto_3,
+        "productSbuject":"제판장비",
+        "links" : "/printice/Automation/"
+      }
+    ]
+  }
+  return(
+    <div>
+      <ul id="autoList" className="clear">
+      {state.autolist.map((autolists, i)=>(
+        <li key={i}>
+          <NavLink to={autolists.links}>
+            <div className="productTitle">
+              <h2 className="sectionSubTitles">{autolists.productSbuject}</h2>
+            </div>
+            <div id={"auto_"+i} className="autoThumbs">
+              <img src={autolists.productImg} alt={"프린티스 "+autolists.productSbuject} />
+            </div>
+          </NavLink>
+        </li>
+      ))}
+      </ul>
+    </div>
     )
-  }
 }
+function Partners(state) {
+  state = {
+    partner : [
+      {
+        "logoImg" : partner_1,
+        "logoAlt" : "삼성 samsung"
+      },
+      {
+        "logoImg" : partner_2,
+        "logoAlt" : "엘지 LG"
+      },
+      {
+        "logoImg" : partner_3,
+        "logoAlt" : "엘지 이노텍 LG Innotek"
+      },
+      {
+        "logoImg" : partner_4,
+        "logoAlt" : "희성전자 HEESUNG ELECTRONICS"
+      },
+      {
+        "logoImg" : partner_5,
+        "logoAlt" : "일진 ILJIN"
+      }
+    ]
+  }
+  const params = {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    freeMode: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  } 
+  return (
+    <div>
+      <Swiper {...params}>
+      {state.partner.map((partners, i)=>(
+        <div key={i}>
+          <div>
+            <img src={partners.logoImg} alt={partners.logoAlt} />
+          </div>
+        </div>
+      ))}
+      </Swiper>
+    </div>
+  )
+}
+
 export default Main;

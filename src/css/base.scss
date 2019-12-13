@@ -92,3 +92,41 @@ a:hover {text-decoration:none}
 #Route {
   margin-top: 115px;
 }
+.footers {
+  padding-top: 2.6%;
+  padding-bottom: 2.6%;
+  background:#686868;
+  color:#fff;
+  font-size: 0.7rem;
+  font-weight: 400;
+  .footerHead {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    span {
+      font-weight: 600;
+      line-height: 1.8;
+      margin-left: 2%;
+    }
+  }
+  .footerBody {
+    .copys {
+      margin: 10px auto;
+      span {
+        font-weight: 500;
+      }
+    }
+    .infos {
+      p {
+        margin-bottom: 0;
+        .infoCate {
+          margin-left: 10px;
+          margin-right: 5px;
+          font-weight: 600;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

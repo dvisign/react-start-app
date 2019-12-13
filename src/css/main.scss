@@ -149,6 +149,117 @@
     }
   }
   #autos {
-
+    padding-top: 3.76%;
+    padding-bottom: 4.28%;
+    #autoList {
+      li {
+        float:left;
+        width:calc(100% / 3);
+        overflow: hidden;
+        border-right: 1px solid #888888;
+        height: 514px;
+        position: relative;
+        padding:30px 40px;
+        .sectionSubTitles {
+          font-weight: 500;
+          color:#686868;
+        }
+        .autoThumbs {
+          position: absolute;
+          bottom: 30px;
+          transition: 0.5s;
+        }
+        #auto_0 {
+          right: -15%;
+          img {
+            width:100%;
+            min-width: 316px;
+          }
+          &:hover {
+            right:0;
+          }    
+        }
+        #auto_1 {
+          right: -9%;
+          img {
+            width:100%;
+            min-width: 226px;
+          }
+          &:hover {
+            right:0%;
+          }
+        }
+        #auto_2 {
+          right: -44%;
+          img {
+            width:100%;
+            min-width: 390px;
+          }
+          &:hover {
+            right:-10%;
+          }
+        }
+      }
+    }
+  }
+  #partners {
+    padding-top: 6.3%;
+    padding-bottom: 6.3%;
+    background:#dbdbdb;
+    text-align: center;
+    .swiper-container {
+      overflow: initial;
+      .swiper-button-next {
+        right: auto;
+        left: 101%;
+        color:#000;
+        &:after {
+          font-size: 1rem;
+        }
+      }
+      .swiper-button-prev {
+        right: 101%;
+        left: auto;
+        color:#000;
+        &:after {
+          font-size: 1rem;
+        }
+      }
+      .swiper-slide {
+        width:auto !important;
+      }
+    }
+  }
+  #contact {
+    padding-top: 9.5%;
+    padding-bottom: 9.5%;
+    color:#686868;
+    font-weight: 500;
+    #contactInfo {
+      margin-bottom: 0;
+      li {
+        float: left;
+        width:calc(100% / 3);
+        &:first-child {
+          .sectionSubTitles {
+            color:#ffcc00
+          }
+        }
+        &:last-child {
+          text-align: right;
+          div {
+            display: inline-block;
+            text-align: left;
+          }
+        }
+        .sectionSubTitles {
+          font-weight: 600;
+        }
+        p {
+          margin-bottom: 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
   }
 }
