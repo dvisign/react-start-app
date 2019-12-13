@@ -29,7 +29,7 @@ class Main extends Component {
           <MDBContainer id="bannerTitle">
             <div>
               <h2 className="sectionTitles">새로움을 즐기며<br/> 새로운 기술을 선도하는 기업</h2>
-              <p className="sectionSubTitles">Printise is creative technology</p>
+              <p className="sectionSubTitles">Printis is creative technology</p>
             </div>
           </MDBContainer>
         </section>
@@ -138,7 +138,7 @@ class NewsList extends Component {
           </div>
           {this.state.newsLatest.map((newsLatests, i) => (
           <div className="newsItems" key={i}>
-            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/printice/news/"+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
+            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/printis/news/"+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
             <span className="listDateTime">{newsLatests.wr_datetime}</span>
           </div>
           ))}
@@ -153,22 +153,22 @@ function PrintProducts(state) {
       {
         "productImg":print_1,
         "productSbuject":"인쇄장비",
-        "links": "/printice/Print/print/"
+        "links": "/printis/Print/print/"
       },
       {
         "productImg":print_2,
         "productSbuject":"라벨장비",
-        "links": "/printice/Print/label/"
+        "links": "/printis/Print/label/"
       },
       {
         "productImg":print_3,
         "productSbuject":"제판장비",
-        "links": "/printice/Print/engraving/"
+        "links": "/printis/Print/engraving/"
       },
       {
         "productImg":print_4,
         "productSbuject":"건조장비",
-        "links": "/printice/Print/dry/"
+        "links": "/printis/Print/dry/"
       }
     ]
   }
@@ -197,17 +197,17 @@ function AutoProducts(state) {
       {
         "productImg":auto_1,
         "productSbuject":"TOUCH 장비",
-        "links" : "/printice/Automation/"
+        "links" : "/printis/Automation/"
       },
       {
         "productImg":auto_2,
         "productSbuject":"로보트자동화",
-        "links" : "/printice/Automation/"
+        "links" : "/printis/Automation/"
       },
       {
         "productImg":auto_3,
         "productSbuject":"제판장비",
-        "links" : "/printice/Automation/"
+        "links" : "/printis/Automation/"
       }
     ]
   }
@@ -252,11 +252,31 @@ function Partners(state) {
       {
         "logoImg" : partner_5,
         "logoAlt" : "일진 ILJIN"
+      },
+      {
+        "logoImg" : partner_1,
+        "logoAlt" : "삼성 samsung"
+      },
+      {
+        "logoImg" : partner_2,
+        "logoAlt" : "엘지 LG"
+      },
+      {
+        "logoImg" : partner_3,
+        "logoAlt" : "엘지 이노텍 LG Innotek"
+      },
+      {
+        "logoImg" : partner_4,
+        "logoAlt" : "희성전자 HEESUNG ELECTRONICS"
+      },
+      {
+        "logoImg" : partner_5,
+        "logoAlt" : "일진 ILJIN"
       }
     ]
   }
   const params = {
-    slidesPerView: 1,
+    slidesPerView: 5,
     spaceBetween: 40,
     freeMode: true,
     navigation: {

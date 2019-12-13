@@ -52,7 +52,29 @@ a:hover {text-decoration:none}
   content: " ";
   display: block;
 }
-
+.sectionTitles {
+  font-size: 2.248rem;
+  font-weight: 400;
+  position: relative;
+  padding-top: 15px;
+  margin-bottom: .5rem;
+}
+.sectionSubTitles {
+  font-size: 1.54rem;
+  font-weight: 400;
+}
+.subSections {
+  padding-top: 6.3065%;
+  padding-bottom: calc(6.3065% + 20px);
+  text-align: center;
+  .subTitArea {
+    margin-bottom: 9.01%;
+    .sectionSubTitles {
+      font-weight: 500;
+      color:#ffcc00;
+    }
+  }
+}
 // 네비게이션
 #mainNavs {
   position: fixed;
@@ -89,9 +111,26 @@ a:hover {text-decoration:none}
     }
   }
 }
+//라우트
 #Route {
   margin-top: 115px;
 }
+//페이지헤더
+.pageHeader {
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 7.3%;
+  padding-bottom: 7.3%;
+  color:#fff;
+  .sectionSubTitles {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+// 풋터
 .footers {
   padding-top: 2.6%;
   padding-bottom: 2.6%;

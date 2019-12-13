@@ -42,16 +42,16 @@ class Print extends Component {
       <div>
         <ul className="clear subNav">
           <li>
-            <Link to={"/printice/Print/print/"}>인쇄장비</Link>
+            <Link to={"/printis/Print/print/"}>인쇄장비</Link>
           </li>
           <li>
-            <Link to={"/printice/Print/label/"}>라벨장비</Link>
+            <Link to={"/printis/Print/label/"}>라벨장비</Link>
           </li>
           <li>
-            <Link to={"/printice/Print/engraving/"}>제판설비</Link>
+            <Link to={"/printis/Print/engraving/"}>제판설비</Link>
           </li>
           <li>
-            <Link to={"/printice/Print/dry/"}>건조장비</Link>
+            <Link to={"/printis/Print/dry/"}>건조장비</Link>
           </li>
         </ul>
         <Switch >

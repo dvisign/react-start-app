@@ -25,7 +25,7 @@ class BoardList extends Component {
           ) : (
             this.state.list.map((lists, i)=>(
               <div key={i}>
-                <Link to={"/printice/Print/"+this.state.category+"/"+lists.wr_id}>{lists.wr_subject}</Link>
+                <Link to={"/printis/Print/"+this.state.category+"/"+lists.wr_id}>{lists.wr_subject}</Link>
               </div>
             ))
           )

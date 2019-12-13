@@ -1,7 +1,7 @@
 {
-  "name": "printice",
+  "name": "printis",
   "version": "0.1.0",
-  "homepage": "http://dbrandtest.com/printice/",
+  "homepage": "http://dbrandtest.com/printis/",
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.7.0",

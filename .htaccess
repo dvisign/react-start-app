@@ -2,10 +2,10 @@
 
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^/printice/index\.html$ - [L]
+  RewriteRule ^/printis/index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /printice/index.html [L]
+  RewriteRule . /printis/index.html [L]
 
 </IfModule>

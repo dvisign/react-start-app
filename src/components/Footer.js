@@ -9,7 +9,7 @@ class Footer extends Component {
       <div className="footers">
         <MDBContainer>
           <div className="footerHead">
-            <NavLink to="/printice/">
+            <NavLink to="/printis/">
               <img src={FooterLogo} alt="프린티스" />
             </NavLink>
             <span>Printis is creative technology</span>
