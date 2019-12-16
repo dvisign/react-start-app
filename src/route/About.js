@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PageHeader from 'components/PageHeader'
-import {MDBContainer} from 'mdbreact'
+import {MDBContainer, MDBAnimation} from 'mdbreact'
 import GoogleMaps from 'components/GoogleMaps';
 import Swiper from 'react-id-swiper';
 
@@ -292,15 +292,17 @@ class About extends Component {
             <div id="philosophyConts" className="clear">
             {this.state.philosophyItems.map((philosophyItem, i)=>(
               <div className="philosophyItems" key={i}>
-                <div className="philosophyImg">
-                  <img src={philosophyItem.philosophyImg} alt={"프린티스 "+philosophyItem.philosophyTit} />
-                </div>
-                <div>
-                  <p className="philosophyTit">{philosophyItem.philosophyTit}</p>
-                </div>
-                <div>
-                  <p className="philosophyTxt">{philosophyItem.philosophyTxt}</p>
-                </div>
+                <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+                  <div className="philosophyImg">
+                    <img src={philosophyItem.philosophyImg} alt={"프린티스 "+philosophyItem.philosophyTit} />
+                  </div>
+                  <div>
+                    <p className="philosophyTit">{philosophyItem.philosophyTit}</p>
+                  </div>
+                  <div>
+                    <p className="philosophyTxt">{philosophyItem.philosophyTxt}</p>
+                  </div>
+                </MDBAnimation>
               </div>
             ))}
             </div>
@@ -313,15 +315,19 @@ class About extends Component {
             </div>
             <div id="ciConts" className="clear">
               <div className="ciItems">
-                <div id="ciImgs">
-                  <img src={ci} alt="" />
-                </div>
+                <MDBAnimation reveal type="fadeInUp" delay="0">
+                  <div id="ciImgs">
+                    <img src={ci} alt="" />
+                  </div>
+                </MDBAnimation>
               </div>
               <div className="ciItems">
-                <div className="ciItemTxt">
-                  <p id="ciSlogan">Printis is creative technology</p>
-                  <p id="ciSurpotTxt">PRINT + TECHNOLOGY + IS의 합성어로 만들어진<br/> 브랜드명으로 인쇄관련 장비제작 및 주변 자동화 장비<br/> 제작을 통해 사회에 이바지 하고자 합니다.</p>
-                </div>
+                <MDBAnimation reveal type="fadeInUp" delay="0.3s">
+                  <div className="ciItemTxt">
+                    <p id="ciSlogan">Printis is creative technology</p>
+                    <p id="ciSurpotTxt">PRINT + TECHNOLOGY + IS의 합성어로 만들어진<br/> 브랜드명으로 인쇄관련 장비제작 및 주변 자동화 장비<br/> 제작을 통해 사회에 이바지 하고자 합니다.</p>
+                  </div>
+                </MDBAnimation>
               </div>
             </div>
           </MDBContainer>
@@ -332,9 +338,15 @@ class About extends Component {
               <h2 className="sectionSubTitles">CEO 인사말</h2>
             </div>
             <div id="greetingConts">
-              <h3 className="sectionSubTitles">새로움을 즐기며<br/> 새로운 기술을 선도하는 기업</h3>
-              <p className="greetingTxt">프린티스는 끊임없이 변화하는 산업 환경에서 스크린인쇄산업도 새로운 기술로 변화를 이끌어가야 한다는 마음가짐으로 2016년 창립이래 스크린인쇄장비, 건조기, 로보트를 이용한  자동화장비의 다양한 분야에서 지속적인 성장과 발전을 거듭하고 있습니다.<br/><br/><br/>그동안의 축적된 노하우와 경험, 기술과 연구개발를 통해 고객에게 더 좋은 제품과 서비스, 더 큰 만족과 니즈를 충족시켜 드리고자 노력할 것을 약속 드립니다.<br/><br/><br/>끊임없는 새로운 도전과 혁신으로 스크린인쇄 및 자동화 장비분야에서 경쟁력 있는 기업, 착한 기업으로 나아갈수 있도록 최선을 다 할 것입니다. 앞으로도 지속적인 관심과 격려 부탁 드립니다.<br/><br/><br/>감사합니다.</p>
-              <p className="ceoNames"><span>프린티스 대표</span><img src={ceoName} alt="프린티스 대표 전병문" /></p>
+              <MDBAnimation reveal type="fadeInUp" delay="0">
+                <h3 className="sectionSubTitles">새로움을 즐기며<br/> 새로운 기술을 선도하는 기업</h3>
+              </MDBAnimation>
+              <MDBAnimation reveal type="fadeInUp" delay="0.3s">
+                <p className="greetingTxt">프린티스는 끊임없이 변화하는 산업 환경에서 스크린인쇄산업도 새로운 기술로 변화를 이끌어가야 한다는 마음가짐으로 2016년 창립이래 스크린인쇄장비, 건조기, 로보트를 이용한  자동화장비의 다양한 분야에서 지속적인 성장과 발전을 거듭하고 있습니다.<br/><br/><br/>그동안의 축적된 노하우와 경험, 기술과 연구개발를 통해 고객에게 더 좋은 제품과 서비스, 더 큰 만족과 니즈를 충족시켜 드리고자 노력할 것을 약속 드립니다.<br/><br/><br/>끊임없는 새로운 도전과 혁신으로 스크린인쇄 및 자동화 장비분야에서 경쟁력 있는 기업, 착한 기업으로 나아갈수 있도록 최선을 다 할 것입니다. 앞으로도 지속적인 관심과 격려 부탁 드립니다.<br/><br/><br/>감사합니다.</p>
+              </MDBAnimation>
+              <MDBAnimation reveal type="fadeInUp" delay="0.6s">
+                <p className="ceoNames"><span>프린티스 대표</span><img src={ceoName} alt="프린티스 대표 전병문" /></p>
+              </MDBAnimation>
             </div>
           </MDBContainer>
         </section>
@@ -345,29 +357,31 @@ class About extends Component {
             </div>
             <div id="historyConts">
             {this.state.historyItems.map((historyItem,i)=>(
-              <div className="clear historyLines" key={i}>
-                <div className="historyYears">
-                  <span>{historyItem.years}</span>
-                </div>
-                <div className="historyMonth">
-                {historyItem.month.map((months, j)=>(
-                  <div className="clear historyDetail" key={j}>
-                    <div className="historyDate">
-                      <span className="line2"></span>
-                      <span>{months.date}</span>
-                    </div>
-                    <div className="historyTexts">
-                    {months.content.map((contents, z)=>(
-                      <div key={z}>
-                        <span>{contents.text}</span>  
-                      </div>
-                    ))}  
-                    </div>
+              <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+                <div className="clear historyLines" key={i}>
+                  <div className="historyYears">
+                    <span>{historyItem.years}</span>
                   </div>
-                ))}  
-                <span className="lines"></span>
+                  <div className="historyMonth">
+                  {historyItem.month.map((months, j)=>(
+                    <div className="clear historyDetail" key={j}>
+                      <div className="historyDate">
+                        <span className="line2"></span>
+                        <span>{months.date}</span>
+                      </div>
+                      <div className="historyTexts">
+                      {months.content.map((contents, z)=>(
+                        <div key={z}>
+                          <span>{contents.text}</span>  
+                        </div>
+                      ))}  
+                      </div>
+                    </div>
+                  ))}  
+                  <span className="lines"></span>
+                  </div>
                 </div>
-              </div>
+              </MDBAnimation>
             ))}
             </div>
           </MDBContainer>
@@ -377,17 +391,19 @@ class About extends Component {
             <div className="subTitArea">
               <h2 className="sectionSubTitles">인증 및 특허</h2>
             </div>
-            <div id="awardsConts">
-              <div id="awardList">
-                <Swiper {...params}>
-                {this.state.awardsItems.map((awardsItem, i)=>(
-                  <div key={i}>
-                    <img src={awardsItem.awardsImg} alt={awardsItem.awardsAlt} title={awardsItem.awardsAlt} />
-                  </div>
-                ))}
-                </Swiper>
+            <MDBAnimation reveal type="fadeInUp" delay="0">
+              <div id="awardsConts">
+                <div id="awardList">
+                  <Swiper {...params}>
+                  {this.state.awardsItems.map((awardsItem, i)=>(
+                    <div key={i}>
+                      <img src={awardsItem.awardsImg} alt={awardsItem.awardsAlt} title={awardsItem.awardsAlt} />
+                    </div>
+                  ))}
+                  </Swiper>
+                </div>
               </div>
-            </div>
+            </MDBAnimation>
           </MDBContainer>
         </section>
         <section id="aboutPartners" className="subSections">
@@ -399,7 +415,9 @@ class About extends Component {
               <ul id="partnerLists" className="clear">
               {this.state.parterItems.map((parterItem, i)=>(
                 <li key={i}>
-                  <img alt={parterItem.parterTitle} title={parterItem.parterTitle} src={parterItem.parterImg} />
+                  <MDBAnimation reveal type="fadeInUp" delay={i*0.1+"s"}>
+                    <img alt={parterItem.parterTitle} title={parterItem.parterTitle} src={parterItem.parterImg} />
+                  </MDBAnimation>
                 </li>
               ))}
               </ul>

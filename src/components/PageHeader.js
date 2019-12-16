@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {MDBAnimation} from 'mdbreact';
 
 class PageHeader extends Component {
   state = {
@@ -21,7 +22,9 @@ class PageHeader extends Component {
     }
     return(
       <div id={"ph_"+this.state.page} className="pageHeader" style={headerBg}>
-        <h2 className="sectionSubTitles">{this.state.pageText}</h2>
+        <MDBAnimation reveal type="fadeInUp">
+          <h2 className="sectionSubTitles">{this.state.pageText}</h2>
+        </MDBAnimation>
       </div>
     )
   }

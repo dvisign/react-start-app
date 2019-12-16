@@ -98,6 +98,9 @@
         position: relative;
         padding:30px 40px;
         transition: 0.5s;
+        .fadeInUp {
+          height: 100%;
+        }
         .sectionSubTitles {
           font-weight: 500;
           color:#686868;
@@ -183,6 +186,9 @@
         position: relative;
         padding:30px 40px;
         transition: 0.5s;
+        .fadeInUp {
+          height: 100%;
+        }
         .sectionSubTitles {
           font-weight: 500;
           color:#686868;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {MDBContainer} from 'mdbreact';
+import {MDBContainer, MDBAnimation} from 'mdbreact';
 import * as board from'service/board';
 import { NavLink } from 'react-router-dom';
 import Swiper from 'react-id-swiper';
@@ -28,10 +28,10 @@ class Main extends Component {
       <main id="mainPage">
         <section id="mainBanner">
           <MDBContainer id="bannerTitle">
-            <div>
+            <MDBAnimation reveal type="fadeInUp">
               <h2 className="sectionTitles">새로움을 즐기며<br/> 새로운 기술을 선도하는 기업</h2>
               <p className="sectionSubTitles">Printis is creative technology</p>
-            </div>
+            </MDBAnimation>
           </MDBContainer>
         </section>
         <section id="newsLatest">
@@ -66,22 +66,22 @@ class Main extends Component {
           <MDBContainer>
             <ul id="contactInfo" className="clear">
               <li>
-                <div>
+                <MDBAnimation reveal type="fadeInUp" delay="0">
                   <h2 className="sectionSubTitles">Contact<br/>Information</h2>
-                </div>
+                </MDBAnimation>
               </li>
               <li>
-                <div>
+                <MDBAnimation reveal type="fadeInUp" delay="0.3s">
                   <h2 className="sectionSubTitles">010. 9181. 4265</h2>
                   <p><span>Tel. </span>032. 812. 6272<span>Fax. </span>032. 812. 6273</p>
                   <p><span>Email. </span>printis001@hanmail.net</p>
-                </div>
+                </MDBAnimation>
               </li>
               <li>
-                <div>
+                <MDBAnimation reveal type="fadeInUp" delay="0.6s">
                   <p>인천광역시 남동구 남동동로 33번길 10<br/> 2동 (154B 9L)</p>
                   <p>2 dong, 10 Namdongdong-ro<br/>33beon-gil, Namdong-go,<br/>Inccheon, Republic of Korea</p>
-                </div>
+                </MDBAnimation>
               </li>
             </ul>
           </MDBContainer>
@@ -181,20 +181,22 @@ function PrintProducts(state) {
   }
   return(
     <div>
-      <ul id="printList" className="clear">
-      {state.printlist.map((printlists, i)=>(
-        <li key={i} id={"printlists_"+i} onMouseOver={(e) => event.overEvent("#printList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#printList","li")}>
-          <NavLink to={printlists.links}>
-            <div className="productTitle">
-              <h2 className="sectionSubTitles">{printlists.productSbuject}</h2>
-            </div>
-            <div id={"print_"+i} className="printThumbs">
-              <img src={printlists.productImg} alt={"프린티스 "+printlists.productSbuject} />
-            </div>
-          </NavLink>
-        </li>
-      ))}
-      </ul>
+        <ul id="printList" className="clear">
+        {state.printlist.map((printlists, i)=>(
+          <li key={i} id={"printlists_"+i} onMouseOver={(e) => event.overEvent("#printList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#printList","li")}>
+            <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+              <NavLink to={printlists.links}>
+                <div className="productTitle">
+                  <h2 className="sectionSubTitles">{printlists.productSbuject}</h2>
+                </div>
+                <div id={"print_"+i} className="printThumbs">
+                  <img src={printlists.productImg} alt={"프린티스 "+printlists.productSbuject} />
+                </div>
+              </NavLink>
+            </MDBAnimation>
+          </li>
+        ))}
+        </ul>
     </div>
   )
 }
@@ -220,20 +222,22 @@ function AutoProducts(state) {
   }
   return(
     <div>
-      <ul id="autoList" className="clear">
-      {state.autolist.map((autolists, i)=>(
-        <li key={i} id={"autolists_"+i} onMouseOver={(e) => event.overEvent("#autoList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#autoList","li")}>
-          <NavLink to={autolists.links}>
-            <div className="productTitle">
-              <h2 className="sectionSubTitles">{autolists.productSbuject}</h2>
-            </div>
-            <div id={"auto_"+i} className="autoThumbs">
-              <img src={autolists.productImg} alt={"프린티스 "+autolists.productSbuject} />
-            </div>
-          </NavLink>
-        </li>
-      ))}
-      </ul>
+        <ul id="autoList" className="clear">
+        {state.autolist.map((autolists, i)=>(
+          <li key={i} id={"autolists_"+i} onMouseOver={(e) => event.overEvent("#autoList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#autoList","li")}>
+            <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+              <NavLink to={autolists.links}>
+                <div className="productTitle">
+                  <h2 className="sectionSubTitles">{autolists.productSbuject}</h2>
+                </div>
+                <div id={"auto_"+i} className="autoThumbs">
+                  <img src={autolists.productImg} alt={"프린티스 "+autolists.productSbuject} />
+                </div>
+              </NavLink>
+            </MDBAnimation>
+          </li>
+        ))}
+        </ul>
     </div>
     )
 }
