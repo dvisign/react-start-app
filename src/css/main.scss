@@ -1,24 +1,33 @@
 #mainPage {
-  .sectionTitles::after {
-    position: absolute;
-    display: block;
-    content:" ";
-    width: 75px;
-    height: 4px;
-    background:#ffcc00;
-    left: 2px;
-    top: 0;
+  .subTitArea {
+    text-align: center;
+    margin-bottom: 9.01%;
+    .sectionSubTitles {
+      font-weight: 500;
+      color:#ffcc00;
+    }
   }
+  // 메인배너
   #mainBanner {
     background-image: url("../img/main/MainBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    .sectionTitles::after {
+      position: absolute;
+      display: block;
+      content:" ";
+      width: 75px;
+      height: 4px;
+      background:#ffcc00;
+      left: 2px;
+      top: 0;
+    }
     #bannerTitle {
       color:#fff;
       padding-top: 14%;
-      padding-bottom: 9%;
+      padding-bottom: 4%;
       .sectionTitles {
         text-align: left;
       }
@@ -28,9 +37,10 @@
       }
     }
   }
+  // 뉴스 최근글리스트
   #newsLatest {
     padding-top: 6.7%;
-    padding-bottom: 8%;
+    padding-bottom: 7%;
     .sectionSubTitles {
       color:#ffcc00;
       border-bottom: 2px solid #6f6c64;
@@ -74,19 +84,20 @@
       }
     }
   }
+  // 인쇄장비
   #prints {
     padding-top: 3.76%;
     padding-bottom: 4.28%;
-    background:#dbdbdb;
     #printList {
       li {
         float:left;
         width:calc(100% / 4);
         overflow: hidden;
-        border-right: 1px solid #888888;
+        border-right: 1px solid rgba(136,136,136,0.2);
         height: 514px;
         position: relative;
         padding:30px 40px;
+        transition: 0.5s;
         .sectionSubTitles {
           font-weight: 500;
           color:#686868;
@@ -102,18 +113,12 @@
             width:100%;
             min-width: 227px;
           }
-          &:hover {
-            right:0;
-          }    
         }
         #print_1 {
           right: -75%;
           img {
             width:100%;
             min-width: 424px;
-          }
-          &:hover {
-            right:-25%;
           }
         }
         #print_2 {
@@ -122,9 +127,6 @@
             width:100%;
             min-width: 277px;
           }
-          &:hover {
-            right:0;
-          }
         }
         #print_3 {
           right: -17%;
@@ -132,13 +134,42 @@
             width:100%;
             min-width: 244px;
           }
-          &:hover {
-            right:0;
-          }
         }
+      }
+      #printlists_0:hover {
+        .printThumbs {
+          right: 20%;
+        }
+      }
+      #printlists_1:hover {
+        .printThumbs {
+          right:-5%;
+        }
+      }
+      #printlists_2:hover {
+        .printThumbs {
+          right:10%;
+        }
+      }
+      #printlists_3:hover {
+        .printThumbs {
+          right:10%;
+        }
+      }
+      .active {
+        width:35%;
+        box-shadow: 5px 5px 14px rgba(0,0,0,0.3);
+        background:#ffcc00;
+        .sectionSubTitles {
+          color:#fff;
+        }
+      }
+      .native {
+        width:calc((100% - 35%) / 3);
       }
     }
   }
+  // 자동화장비
   #autos {
     padding-top: 3.76%;
     padding-bottom: 4.28%;
@@ -147,10 +178,11 @@
         float:left;
         width:calc(100% / 3);
         overflow: hidden;
-        border-right: 1px solid #888888;
+        border-right: 1px solid rgba(136,136,136,0.2);
         height: 514px;
         position: relative;
         padding:30px 40px;
+        transition: 0.5s;
         .sectionSubTitles {
           font-weight: 500;
           color:#686868;
@@ -165,9 +197,6 @@
           img {
             width:100%;
             min-width: 316px;
-          }
-          &:hover {
-            right:0;
           }    
         }
         #auto_1 {
@@ -176,9 +205,6 @@
             width:100%;
             min-width: 226px;
           }
-          &:hover {
-            right:0%;
-          }
         }
         #auto_2 {
           right: -44%;
@@ -186,17 +212,41 @@
             width:100%;
             min-width: 390px;
           }
-          &:hover {
-            right:-10%;
-          }
         }
+      }
+      #autolists_0:hover {
+        .autoThumbs {
+          right: 10%;
+        }
+      }
+      #autolists_1:hover {
+        .autoThumbs {
+          right: 30%;
+        }
+      }
+      #autolists_2:hover {
+        .autoThumbs {
+          right: 10%;
+        }
+      }
+      .active {
+        width:45%;
+        box-shadow: 5px 5px 14px rgba(0,0,0,0.3);
+        background:#ffcc00;
+        .sectionSubTitles {
+          color:#fff;
+        }
+      }
+      .native {
+        width:calc((100% - 45%) / 2);
       }
     }
   }
+  // 파트너
   #partners {
     padding-top: 6.3%;
     padding-bottom: 6.3%;
-    background:#dbdbdb;
+    background:#ffcc00;
     text-align: center;
     .swiper-container {
       padding:0 20px;
@@ -217,6 +267,7 @@
       }
     }
   }
+  // 연락처
   #contact {
     padding-top: 9.5%;
     padding-bottom: 9.5%;
@@ -247,6 +298,12 @@
           font-size: 0.8rem;
         }
       }
+    }
+  }
+  // 오시는길
+  #locations {
+    .mapArea {
+      height: 600px;
     }
   }
 }

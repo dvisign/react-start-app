@@ -4,6 +4,7 @@ import * as board from'service/board';
 import { NavLink } from 'react-router-dom';
 import Swiper from 'react-id-swiper';
 import GoogleMaps from 'components/GoogleMaps';
+import * as event from'service/event';
 // css, scss
 import "css/main.scss"
 import 'swiper/css/swiper.css'
@@ -40,11 +41,17 @@ class Main extends Component {
         </section>
         <section id="prints">
           <MDBContainer>
+            <div className="subTitArea">
+              <h2 className="sectionSubTitles">인쇄장비</h2>
+            </div>
             <PrintProducts/>
           </MDBContainer>
         </section>
         <section id="autos">
           <MDBContainer>
+            <div className="subTitArea">
+              <h2 className="sectionSubTitles">인쇄장비</h2>
+            </div>
             <AutoProducts/>
           </MDBContainer>
         </section>
@@ -176,7 +183,7 @@ function PrintProducts(state) {
     <div>
       <ul id="printList" className="clear">
       {state.printlist.map((printlists, i)=>(
-        <li key={i}>
+        <li key={i} id={"printlists_"+i} onMouseOver={(e) => event.overEvent("#printList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#printList","li")}>
           <NavLink to={printlists.links}>
             <div className="productTitle">
               <h2 className="sectionSubTitles">{printlists.productSbuject}</h2>
@@ -189,7 +196,7 @@ function PrintProducts(state) {
       ))}
       </ul>
     </div>
-    )
+  )
 }
 function AutoProducts(state) {
   state = {
@@ -215,7 +222,7 @@ function AutoProducts(state) {
     <div>
       <ul id="autoList" className="clear">
       {state.autolist.map((autolists, i)=>(
-        <li key={i}>
+        <li key={i} id={"autolists_"+i} onMouseOver={(e) => event.overEvent("#autoList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#autoList","li")}>
           <NavLink to={autolists.links}>
             <div className="productTitle">
               <h2 className="sectionSubTitles">{autolists.productSbuject}</h2>
@@ -279,6 +286,7 @@ function Partners(state) {
     slidesPerView: 5,
     spaceBetween: 40,
     freeMode: true,
+    loop:true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

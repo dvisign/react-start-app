@@ -5,6 +5,9 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { Main, About, Print, Automation, News, NotFound } from 'route';
 
 class App extends Component {
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return(
       <div className="wrapper">

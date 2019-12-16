@@ -6,7 +6,7 @@ const GoogleMaps = compose(
   withProps({
     googleMapURL:"http://maps.googleapis.com/maps/api/js?key=AIzaSyBzaMQIpYHNiqA3cJ496WunEv3XnLxEYz0&region=KR",
     loadingElement: <div style={{ height: "100%" }} />,
-    containerElement: <div style={{ height: "600px" }} />,
+    containerElement: <div className="mapArea" />,
     mapElement: <div style={{ height: "100%" }} />
   }),
   withScriptjs,

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PageHeader from 'components/PageHeader'
 import {MDBContainer} from 'mdbreact'
 import GoogleMaps from 'components/GoogleMaps';
+import Swiper from 'react-id-swiper';
+
 //css, scss
 import "css/about.scss";
 //img
@@ -11,6 +13,24 @@ import philosophy_2 from 'img/about/philosophy_2.png';
 import philosophy_3 from 'img/about/philosophy_3.png';
 import ci from 'img/about/ci.png';
 import ceoName from 'img/about/ceoname.png';
+import awards_1 from 'img/about/award_1.jpg';
+import awards_2 from 'img/about/award_2.jpg';
+import awards_3 from 'img/about/award_3.jpg';
+import partner_1 from 'img/about/partner_1.png';
+import partner_2 from 'img/about/partner_2.png';
+import partner_3 from 'img/about/partner_3.png';
+import partner_4 from 'img/about/partner_4.png';
+import partner_5 from 'img/about/partner_5.png';
+import partner_6 from 'img/about/partner_6.png';
+import partner_7 from 'img/about/partner_7.png';
+import partner_8 from 'img/about/partner_8.png';
+import partner_9 from 'img/about/partner_9.png';
+import partner_10 from 'img/about/partner_10.png';
+import partner_11 from 'img/about/partner_11.png';
+import partner_12 from 'img/about/partner_12.png';
+import partner_13 from 'img/about/partner_13.png';
+import partner_14 from 'img/about/partner_14.png';
+import partner_15 from 'img/about/partner_15.png';
 
 class About extends Component {
   state = {
@@ -165,9 +185,98 @@ class About extends Component {
           }
         ]
       }      
+    ],
+    awardsItems : [
+      {
+        "awardsImg" : awards_1,
+        "awardsAlt" : "품질경영시스템 인증서"
+      },
+      {
+        "awardsImg" : awards_2,
+        "awardsAlt" : "가와사키로보틱스 판매인증서"
+      },
+      {
+        "awardsImg" : awards_3,
+        "awardsAlt" : "기술혁신형 중소기업 확인서"
+      }
+    ],
+    parterItems : [
+      {
+        "parterImg" : partner_1,
+        "parterTitle" : "삼성"
+      },
+      {
+        "parterImg" : partner_2,
+        "parterTitle" : "LG"
+      },
+      {
+        "parterImg" : partner_3,
+        "parterTitle" : "LG 이노텍"
+      },
+      {
+        "parterImg" : partner_4,
+        "parterTitle" : "희성전자주식회사"
+      },
+      {
+        "parterImg" : partner_5,
+        "parterTitle" : "ILJIN"
+      },
+      {
+        "parterImg" : partner_6,
+        "parterTitle" : "ELK"
+      },
+      {
+        "parterImg" : partner_7,
+        "parterTitle" : "SMAC"
+      },
+      {
+        "parterImg" : partner_8,
+        "parterTitle" : "한국공항공사"
+      },
+      {
+        "parterImg" : partner_9,
+        "parterTitle" : "Markone"
+      },
+      {
+        "parterImg" : partner_10,
+        "parterTitle" : "DigiTech systems"
+      },
+      {
+        "parterImg" : partner_11,
+        "parterTitle" : "이앤에이치"
+      },
+      {
+        "parterImg" : partner_12,
+        "parterTitle" : "INOTOUCH"
+      },
+      {
+        "parterImg" : partner_13,
+        "parterTitle" : "meeredp"
+      },
+      {
+        "parterImg" : partner_14,
+        "parterTitle" : "Yahoo"
+      },
+      {
+        "parterImg" : partner_15,
+        "parterTitle" : "AVIC"
+      }
     ]
   }
   render() {
+    const params = {
+      slidesPerView: 3,
+      loop : true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    }
     return (
       <main id="aboutPage">
         <PageHeader 
@@ -263,10 +372,21 @@ class About extends Component {
             </div>
           </MDBContainer>
         </section>
-        <section id="aboutAwords" className="subSections">
+        <section id="aboutAwards" className="subSections">
           <MDBContainer>
             <div className="subTitArea">
               <h2 className="sectionSubTitles">인증 및 특허</h2>
+            </div>
+            <div id="awardsConts">
+              <div id="awardList">
+                <Swiper {...params}>
+                {this.state.awardsItems.map((awardsItem, i)=>(
+                  <div key={i}>
+                    <img src={awardsItem.awardsImg} alt={awardsItem.awardsAlt} title={awardsItem.awardsAlt} />
+                  </div>
+                ))}
+                </Swiper>
+              </div>
             </div>
           </MDBContainer>
         </section>
@@ -274,6 +394,15 @@ class About extends Component {
           <MDBContainer>
             <div className="subTitArea">
               <h2 className="sectionSubTitles">고객사</h2>
+            </div>
+            <div id="partnerConts">
+              <ul id="partnerLists" className="clear">
+              {this.state.parterItems.map((parterItem, i)=>(
+                <li key={i}>
+                  <img alt={parterItem.parterTitle} title={parterItem.parterTitle} src={parterItem.parterImg} />
+                </li>
+              ))}
+              </ul>
             </div>
           </MDBContainer>
         </section>

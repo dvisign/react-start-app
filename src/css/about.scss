@@ -1,181 +1,202 @@
-// 경영철학
-#philosophyConts {
-  .philosophyItems {
-    float:left;
-    width: calc(100% / 3);
-    p {
-      margin-bottom: 0;
-    }
-    .philosophyImg {
-      margin-bottom: 25px;
-    }
-    .philosophyTit {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-    .philosophyTxt {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-  }
-}
-#aboutCi {
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  #ciConts {
-    .ciItems {
+#aboutPage {
+  // 경영철학
+  #philosophyConts {
+    .philosophyItems {
       float:left;
-      width:50%;
-      #ciImgs {
-        margin-top: 9%;
-        img {
-          width: 100%;
-          max-width: 90%;
-        }
-      }
+      width: calc(100% / 3);
       p {
         margin-bottom: 0;
-        color:#686868;
       }
-      .ciItemTxt {
-        text-align: left;
-        display: inline-block;
-        #ciSlogan {
-          font-size: 1.3rem;
-          font-weight: 600;
-          position: relative;
-          padding-bottom: 17px;
-          &:after {
-            content:"";
-            display: block;
-            width: 60px;
-            height:3px;
-            background:#ffcd00;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-          }
-        }
-        #ciSurpotTxt {
-          margin-top: 17px;
-          font-size: 0.95rem;
-          font-weight: 500;
-        }
+      .philosophyImg {
+        margin-bottom: 25px;
       }
-    }
-  }
-}
-#aboutGreetings {
-  #greetingConts {
-    text-align: left;
-    .sectionSubTitles {
-      font-weight: 600;
-      margin-bottom: 5%;
-    }
-    .greetingTxt {
-      word-break: keep-all;
-      color:#686868;
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 1.2rem;
-    }
-    .ceoNames {
-      text-align: right;
-      font-size: 0.87rem;
-      font-weight: 500;
-      span {
-        position: relative;
-        top: 10px;
-        margin-right: 10px;
+      .philosophyTit {
+        font-size: 1.1rem;
+        font-weight: 600;
       }
-    }
-  }
-}
-#aboutHistory {
-  background-image:url("../img/about/historyBg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  #historyConts {
-    text-align: left;
-    position: relative;
-    .historyLines {
-      color:#686868;
-      &:nth-child(1) {
-        .lines {
-          top: 15px;
-        }
-      }
-      &:nth-child(2) {
-        .lines {
-          top: 0;
-        }
-      }
-      &:nth-child(3) {
-        .lines {
-          top: 0;
-        }
-      }
-      &:nth-child(4) {
-        .lines {
-          bottom: 35px;
-        }
-      }
-      .historyYears {
-        float:left;
-        width:20%;
-        font-size: 1.326rem;
+      .philosophyTxt {
+        font-size: 0.85rem;
         font-weight: 500;
       }
-      .historyMonth {
-        float: left;
-        width: 80%;
-        position: relative;
-        .lines {
-          position: absolute;
-          display: block;
-          width: 1px;
-          height:100%;
-          background: #000;
-          left: 0;
-        }
-        .historyDetail {
-          padding-bottom: 5px;
-          .historyDate {
-            float:left;
-            width:40%;
-            padding-left: 10%;
-            position: relative;
-            font-weight: 500;
-            .line2 {
-              position: absolute;
-              display: block;
-              width: 50px;
-              border-bottom: 1px dotted #898989;
-              top: 50%;
-              transform: translateY(-50%);
-              left: 0;
-              &::after {
-                display: block;
-                content:"";
-                position: absolute;
-                left: 50px;
-                width:15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: #898989;
-                transform: translateY(-45%);
-              }
+    }
+  }
+  // CI소개
+  #aboutCi {
+    .container {
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      #ciConts {
+        .ciItems {
+          float:left;
+          width:50%;
+          #ciImgs {
+            margin-top: 9%;
+            img {
+              width: 100%;
+              max-width: 90%;
             }
           }
-          .historyTexts {
-            float:left;
-            width:60%;
-            div {
-              padding-bottom: 5px;
-              &:last-child {
-                padding-bottom: 15px;
+          p {
+            margin-bottom: 0;
+            color:#686868;
+          }
+          .ciItemTxt {
+            text-align: left;
+            display: inline-block;
+            #ciSlogan {
+              font-size: 1.3rem;
+              font-weight: 600;
+              position: relative;
+              padding-bottom: 17px;
+              &:after {
+                content:"";
+                display: block;
+                width: 60px;
+                height:3px;
+                background:#ffcd00;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+              }
+            }
+            #ciSurpotTxt {
+              margin-top: 17px;
+              font-size: 0.95rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+  // CEO 인사말
+  #aboutGreetings {
+    #greetingConts {
+      text-align: left;
+      .sectionSubTitles {
+        font-weight: 600;
+        margin-bottom: 5%;
+      }
+      .greetingTxt {
+        word-break: keep-all;
+        color:#686868;
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+      }
+      .ceoNames {
+        text-align: right;
+        font-size: 0.87rem;
+        font-weight: 500;
+        span {
+          position: relative;
+          top: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  // 연혁
+  #aboutHistory {
+    background-image:url("../img/about/historyBg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    #historyConts {
+      text-align: left;
+      position: relative;
+      .historyLines {
+        color:#686868;
+        &:nth-child(1) {
+          .lines {
+            top: 15px;
+          }
+        }
+        &:nth-child(2) {
+          .lines {
+            top: 0;
+          }
+        }
+        &:nth-child(3) {
+          .lines {
+            top: 0;
+          }
+        }
+        &:nth-child(4) {
+          .lines {
+            bottom: 35px;
+          }
+        }
+        .historyYears {
+          float:left;
+          width:23%;
+          font-size: 1.326rem;
+          font-weight: 500;
+        }
+        .historyMonth {
+          float: left;
+          width: 77%;
+          position: relative;
+          &::before {
+            content:" ";
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color:#ffcd00;
+            top: 7.5px;
+            left: -7.5px;
+            z-index: 1
+          }
+          .lines {
+            position: absolute;
+            display: block;
+            width: 1px;
+            height:100%;
+            background: #000;
+            left: 0;
+          }
+          .historyDetail {
+            padding-bottom: 5px;
+            .historyDate {
+              float:left;
+              width:40%;
+              padding-left: 160px;
+              position: relative;
+              font-weight: 500;
+              .line2 {
+                position: absolute;
+                display: block;
+                width: 115px;
+                border-bottom: 1px dotted #898989;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                &::after {
+                  display: block;
+                  content:"";
+                  position: absolute;
+                  left: 110px;
+                  width:15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  background-color: #898989;
+                  transform: translateY(-45%);
+                }
+              }
+            }
+            .historyTexts {
+              float:left;
+              width:60%;
+              font-size: 0.9rem;
+              padding-top: 2px;
+              div {
+                padding-bottom: 5px;
+                &:last-child {
+                  padding-bottom: 15px;
+                }
               }
             }
           }
@@ -183,11 +204,72 @@
       }
     }
   }
-}
-
-
-// 오시는길
-#locations {
-  padding-top: 0;
-  padding-bottom: 0;
+  // 수상
+  #aboutAwards {
+    .container {
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    #awardList {
+      .swiper-container {
+        padding:10px 0 100px 0;
+        .swiper-slide {
+          padding-top: 70px;
+        }
+        img {
+          width:100%;
+          max-width: 268px;
+          box-shadow: 4px 5px 11px 3px rgba(0,0,0,0.5);
+          -webkit-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
+          -moz-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
+        }
+        .swiper-slide-active {
+          padding-top: 0;
+          img {
+            max-width: 340px;
+          }
+        }
+        .swiper-button-next {
+          color:#000;
+          &:after {
+            font-size: 1rem;
+          }
+        }
+        .swiper-button-prev {
+          color:#000;
+          &:after {
+            font-size: 1rem;
+          }
+        }
+        .swiper-pagination {
+          bottom: 0;
+          .swiper-pagination-bullet {
+            width: 18px;
+            height: 18px;
+            margin: 0 7px;
+            background-color: #939495;
+          }
+        }
+      }
+    }
+  }
+  // 파트너
+  #partnerLists {
+    li {
+      float:left;
+      width: calc(100% / 4);
+      margin-bottom: 40px;
+      img {
+        height: 36px;
+      }
+    }
+  }
+  // 오시는길
+  #locations {
+    padding-top: 0;
+    padding-bottom: 0;
+    .mapArea {
+      height: 600px;
+    }
+  }
 }
