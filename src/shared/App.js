@@ -17,7 +17,7 @@ class App extends Component {
             <Route exact path={"/printis/"} component={Main}/>
             <Route path={"/printis/About"} component={About}/>
             <Route path={"/printis/Print/:category"} component={Print}/>
-            <Route path={"/printis/Automation"} component={Automation}/>
+            <Route path={"/printis/Automation/:category"} component={Automation}/>
             <Route path={"/printis/News"} component={News}/>
             <Route component={NoMatchPage}/>
           </Switch>

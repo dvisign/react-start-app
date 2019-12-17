@@ -21,8 +21,22 @@ import partner_2 from 'img/main/partners/logo_2.png';
 import partner_3 from 'img/main/partners/logo_3.png';
 import partner_4 from 'img/main/partners/logo_4.png';
 import partner_5 from 'img/main/partners/logo_5.png';
+import partner_6 from 'img/main/partners/logo_6.png';
+import partner_7 from 'img/main/partners/logo_7.png';
+import partner_8 from 'img/main/partners/logo_8.png';
+import partner_9 from 'img/main/partners/logo_9.png';
+import partner_10 from 'img/main/partners/logo_10.png';
+import partner_11 from 'img/main/partners/logo_11.png';
+import partner_12 from 'img/main/partners/logo_12.png';
+import partner_13 from 'img/main/partners/logo_13.png';
+import partner_14 from 'img/main/partners/logo_14.png';
+import partner_15 from 'img/main/partners/logo_15.png';
 
 class Main extends Component {
+  componentDidMount() {
+    document.title = "printis"
+    event.pagenations("index","0")
+  }
   render() {
     return (
       <main id="mainPage">
@@ -123,7 +137,6 @@ class NewsList extends Component {
     }));
   }
   newslatest = (data) => {
-
     this.setState({
       ...this.state,
       selectid : data.wr_id,
@@ -145,7 +158,7 @@ class NewsList extends Component {
           </div>
           {this.state.newsLatest.map((newsLatests, i) => (
           <div className="newsItems" key={i}>
-            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/printis/news/"+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
+            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/printis/News/?wr_id="+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
             <span className="listDateTime">{newsLatests.wr_datetime}</span>
           </div>
           ))}
@@ -187,7 +200,7 @@ function PrintProducts(state) {
             <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
               <NavLink to={printlists.links}>
                 <div className="productTitle">
-                  <h2 className="sectionSubTitles">{printlists.productSbuject}</h2>
+                  <h2>{printlists.productSbuject}</h2>
                 </div>
                 <div id={"print_"+i} className="printThumbs">
                   <img src={printlists.productImg} alt={"프린티스 "+printlists.productSbuject} />
@@ -228,7 +241,7 @@ function AutoProducts(state) {
             <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
               <NavLink to={autolists.links}>
                 <div className="productTitle">
-                  <h2 className="sectionSubTitles">{autolists.productSbuject}</h2>
+                  <h2>{autolists.productSbuject}</h2>
                 </div>
                 <div id={"auto_"+i} className="autoThumbs">
                   <img src={autolists.productImg} alt={"프린티스 "+autolists.productSbuject} />
@@ -262,33 +275,52 @@ function Partners(state) {
       },
       {
         "logoImg" : partner_5,
-        "logoAlt" : "일진 ILJIN"
+        "logoAlt" : "ILJIN"
       },
       {
-        "logoImg" : partner_1,
-        "logoAlt" : "삼성 samsung"
+        "logoImg" : partner_6,
+        "logoAlt" : "ELK"
       },
       {
-        "logoImg" : partner_2,
-        "logoAlt" : "엘지 LG"
+        "logoImg" : partner_7,
+        "logoAlt" : "SMAC"
       },
       {
-        "logoImg" : partner_3,
-        "logoAlt" : "엘지 이노텍 LG Innotek"
+        "logoImg" : partner_8,
+        "logoAlt" : "한국공항공사"
       },
       {
-        "logoImg" : partner_4,
-        "logoAlt" : "희성전자 HEESUNG ELECTRONICS"
+        "logoImg" : partner_9,
+        "logoAlt" : "Markone"
       },
       {
-        "logoImg" : partner_5,
-        "logoAlt" : "일진 ILJIN"
+        "logoImg" : partner_10,
+        "logoAlt" : "Digitech Systems"
+      },
+      {
+        "logoImg" : partner_11,
+        "logoAlt" : "이앤에이치"
+      },
+      {
+        "logoImg" : partner_12,
+        "logoAlt" : "INOTOUCH"
+      },
+      {
+        "logoImg" : partner_13,
+        "logoAlt" : "meeredp"
+      },
+      {
+        "logoImg" : partner_14,
+        "logoAlt" : "Yahoo"
+      },
+      {
+        "logoImg" : partner_15,
+        "logoAlt" : "AVIC"
       }
     ]
   }
   const params = {
     slidesPerView: 5,
-    spaceBetween: 40,
     freeMode: true,
     loop:true,
     navigation: {
@@ -302,7 +334,7 @@ function Partners(state) {
       {state.partner.map((partners, i)=>(
         <div key={i}>
           <div>
-            <img src={partners.logoImg} alt={partners.logoAlt} />
+            <img src={partners.logoImg} alt={partners.logoAlt} title={partners.logoAlt} />
           </div>
         </div>
       ))}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {Container} from 'mdbreact';
 import Logo from 'img/public/NavLogo.png';
 //import jQuery from 'jquery';
@@ -10,22 +10,22 @@ class Nav extends Component {
         <Container>
           <div className="clear">
             <div id="logos">
-              <NavLink to={"/printis/"}>
+              <Link to={"/printis/"}>
                 <img src={Logo} alt="printis 로고"/>
-              </NavLink>
+              </Link>
             </div>
             <ul id="navList">
               <li>
-                <NavLink to={"/printis/About"}>회사소개</NavLink>
+                <Link to={"/printis/About"}>회사소개</Link>
               </li>
               <li>
-                <NavLink to={"/printis/Print/print"}>인쇄장비</NavLink>
+                <Link to={"/printis/Print/print"}>인쇄장비</Link>
               </li>
               <li>
-                <NavLink to={"/printis/Automation"}>자동화장비</NavLink>
+                <Link to={"/printis/Automation/touch"}>자동화장비</Link>
               </li>
               <li>
-                <NavLink to={"/printis/News"}>News</NavLink>
+                <Link to={"/printis/News"}>News</Link>
               </li>
             </ul>
           </div>

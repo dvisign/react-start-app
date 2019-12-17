@@ -97,14 +97,18 @@ a:hover {text-decoration:none}
       float:left;
       padding-left:65px;
       padding-right:65px;
+      .navActive {
+        color:#fff;
+      }
       a {
         font-size: 0.83rem;
         color:#373737;
         display: block;
         width: 100%;
         font-weight: 400;
+        transition: 0.5s;
         &:hover {
-          color:#373737;
+          color:#fff;
         }
       }
       &:last-child {
@@ -130,6 +134,112 @@ a:hover {text-decoration:none}
   .sectionSubTitles {
     margin-bottom: 0;
     font-weight: 600;
+  }
+}
+// 탭 네비게이션
+.subNav {
+  text-align: center;
+  border: 1px solid #ccc;
+  li {
+    float:left;
+    height: 50px;
+    line-height: 50px;
+    border-right: 1px solid #ccc;
+    &:last-child {
+      border-right: 0;
+    }
+    a {
+      color:#686868;
+      display:block;
+      width: 100%;
+      font-size: 0.8rem;
+      transition: 0.5s;
+      font-weight: 600;
+    }
+    .active {
+      background-color: #ffcc00;
+      color:#fff;
+    }
+  }
+}
+// 리스트 스타일
+.boardListConts {
+  #emptyList {
+    margin-top: 6.3065%;
+    margin-bottom: calc(6.3065% + 20px);
+  }
+  .boardLists {
+    text-align: center;
+    min-height: 600px;
+    .boardItems {
+      margin-top: 6.3065%;
+      margin-bottom: calc(6.3065% + 20px);
+      float:left;
+      width: calc(100% / 3);
+      min-height: 300px;
+      a {
+        display: block;
+        width: 100%;
+        color:#000;
+        font-weight: 600;
+        font-size: 0.785rem;
+        .boardListThumbs {
+          margin-bottom: 40px;
+        }
+        p {
+          word-break: keep-all;
+          width: 50%;
+          margin: 0 auto;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// 뷰 스타일
+#boardView {
+  margin-top: 10.82%;
+  margin-bottom: 12.618%;
+  p {
+    margin-bottom: 0;
+  }
+  #boardProducts {
+    text-align: center;
+    .sectionSubTitles {
+      font-weight: 600;
+      margin-bottom: 5.865%;
+    }
+    #productImg {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 5.865%;
+      img {
+        margin-bottom: 3.184%;
+      }
+    }
+    #productOptions {
+      width:90%;
+      margin: 0 auto;
+      font-size: 0.65rem;
+      #categoryTitle {
+        background-color: #818181;
+        color:#fff;
+        font-weight: 600;
+      }
+      .optionCategory {
+        float: left;
+        width: 30%;
+        padding:15px 0;
+        border-right: 1px solid #fff;
+      }
+      .optionText {
+        float: left;
+        width: 70%;
+        padding:15px 0;
+      }
+    }
   }
 }
 // 풋터

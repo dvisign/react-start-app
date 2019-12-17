@@ -11,8 +11,13 @@ export function overEvent(controllDom, domChild, i) {
     elseEl.addClass("native");
   }
 }
-
 export function leaveEvent(controllDom, domChild) {
   const listEl = jQuery(controllDom + ">" + domChild);
   listEl.removeClass("active native");
+}
+
+// 
+export function pagenations(page, index) {
+  jQuery("#navList a").removeClass("navActive");
+  jQuery("#navList > li:nth-child("+index+") > a").addClass("navActive");
 }

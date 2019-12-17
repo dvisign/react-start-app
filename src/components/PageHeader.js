@@ -16,6 +16,9 @@ class PageHeader extends Component {
       } 
     }
   }
+  componentDidMount() {
+    document.title = this.props.title;
+  }
   render() {
     var headerBg = {
       backgroundImage: 'url(' + this.state.pagebg + ')'

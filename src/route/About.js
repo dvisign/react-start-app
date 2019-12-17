@@ -3,6 +3,7 @@ import PageHeader from 'components/PageHeader'
 import {MDBContainer, MDBAnimation} from 'mdbreact'
 import GoogleMaps from 'components/GoogleMaps';
 import Swiper from 'react-id-swiper';
+import * as event from'service/event';
 
 //css, scss
 import "css/about.scss";
@@ -263,6 +264,9 @@ class About extends Component {
       }
     ]
   }
+  componentDidMount() {
+    event.pagenations("About", "1")
+  }
   render() {
     const params = {
       slidesPerView: 3,
@@ -283,6 +287,7 @@ class About extends Component {
           page="about"
           pagebg={headerImg}
           pageText="회사소개"
+          title="printis 회사소개"
         />
         <section id="philosophys" className="subSections">
           <MDBContainer>
@@ -357,8 +362,8 @@ class About extends Component {
             </div>
             <div id="historyConts">
             {this.state.historyItems.map((historyItem,i)=>(
-              <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
-                <div className="clear historyLines" key={i}>
+              <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"} key={i}>
+                <div className="clear historyLines">
                   <div className="historyYears">
                     <span>{historyItem.years}</span>
                   </div>

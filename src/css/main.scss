@@ -98,12 +98,15 @@
         position: relative;
         padding:30px 40px;
         transition: 0.5s;
+        .productTitle {
+          h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color:#686868
+          }
+        }
         .fadeInUp {
           height: 100%;
-        }
-        .sectionSubTitles {
-          font-weight: 500;
-          color:#686868;
         }
         .printThumbs {
           position: absolute;
@@ -146,7 +149,7 @@
       }
       #printlists_1:hover {
         .printThumbs {
-          right:-5%;
+          right:-20%;
         }
       }
       #printlists_2:hover {
@@ -163,8 +166,10 @@
         width:35%;
         box-shadow: 5px 5px 14px rgba(0,0,0,0.3);
         background:#ffcc00;
-        .sectionSubTitles {
-          color:#fff;
+        .productTitle {
+          h2 {
+            color:#fff;
+          }
         }
       }
       .native {
@@ -188,6 +193,13 @@
         transition: 0.5s;
         .fadeInUp {
           height: 100%;
+        }
+        .productTitle {
+          h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color:#686868
+          }
         }
         .sectionSubTitles {
           font-weight: 500;
@@ -239,8 +251,10 @@
         width:45%;
         box-shadow: 5px 5px 14px rgba(0,0,0,0.3);
         background:#ffcc00;
-        .sectionSubTitles {
-          color:#fff;
+        .productTitle {
+          h2 {
+            color:#fff;
+          }
         }
       }
       .native {
@@ -255,18 +269,19 @@
     background:#ffcc00;
     text-align: center;
     .swiper-container {
-      padding:0 20px;
       img {
-        max-height: 40px;
+        max-width: 50%;
       }
       .swiper-button-next {
-        color:#000;
+        color:#fff;
+        right: 0;
         &:after {
           font-size: 1rem;
         }
       }
       .swiper-button-prev {
-        color:#000;
+        color:#fff;
+        left: 0;
         &:after {
           font-size: 1rem;
         }
