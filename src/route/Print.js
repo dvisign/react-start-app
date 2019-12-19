@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Switch, Route } from 'react-router-dom';
 import * as board from'service/board';
 import BoardList from 'components/board/BoardList';
 import BoardView from 'components/board/BoardView';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
-import queryString from 'query-string';
 import * as event from'service/event';
 // css, scss
 import "css/print.scss";
@@ -47,8 +46,6 @@ class Print extends Component {
     }));
   }
   render() {
-    const query = queryString.parse(this.props.location.search);
-    console.log(this.props)
     return ( 
       <main id="printPage">
         <PageHeader 
@@ -78,17 +75,17 @@ class Print extends Component {
           </div>
           <div id="printConts" className="boardListConts">
             <MDBContainer>
-              {!query.wr_id ? (
-                <BoardList 
-                  page="Print"
-                  list={this.state} 
+              <Switch>
+                <Route 
+                  exact 
+                  path={this.props.match.url} 
+                  render={props=><BoardList list={this.state} page="Print" />}
                 />
-              ) : (
-                <BoardView 
-                  wr_id={query.wr_id} 
-                  bo_table={this.state.bo_table} 
+                <Route  
+                  path={`/:category?/:id`} 
+                  component={BoardView}
                 />
-              )}
+              </Switch>
             </MDBContainer>
           </div>
         </section>

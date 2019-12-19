@@ -21,7 +21,6 @@ class BoardView extends Component {
     var viewData = await Promise.all([
       board.getViewData(server, status, bo_table, wr_id)
     ])
-    console.log(viewData)
     this.setState(prevState => ({
       wr_subject : viewData[0][0]["wr_subject"],
       wr_content : viewData[0][0]["wr_content"]
