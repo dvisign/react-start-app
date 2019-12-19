@@ -27,7 +27,7 @@
     #bannerTitle {
       color:#fff;
       padding-top: 14%;
-      padding-bottom: 4%;
+      padding-bottom: 6%;
       .sectionTitles {
         text-align: left;
       }
@@ -266,7 +266,7 @@
   #partners {
     padding-top: 6.3%;
     padding-bottom: 6.3%;
-    background:#ffcc00;
+    background:#ccc;
     text-align: center;
     .swiper-container {
       img {
@@ -317,6 +317,9 @@
         p {
           margin-bottom: 0;
           font-size: 0.8rem;
+          #infoFax {
+            margin-left: 10px;
+          }
         }
       }
     }

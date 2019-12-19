@@ -30,7 +30,7 @@ class List extends Component {
         {
           this.state.boardList.length === 0 ? (
             <div className="boardLists" id="emptyList">
-              게시글 없음
+              작성글 또는 제품이 없습니다.
             </div>
           ) : (
             <div className="boardLists clear">

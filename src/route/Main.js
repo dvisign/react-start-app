@@ -64,7 +64,7 @@ class Main extends Component {
         <section id="autos">
           <MDBContainer>
             <div className="subTitArea">
-              <h2 className="sectionSubTitles">인쇄장비</h2>
+              <h2 className="sectionSubTitles">자동화장비</h2>
             </div>
             <AutoProducts/>
           </MDBContainer>
@@ -87,7 +87,7 @@ class Main extends Component {
               <li>
                 <MDBAnimation reveal type="fadeInUp" delay="0.3s">
                   <h2 className="sectionSubTitles">010. 9181. 4265</h2>
-                  <p><span>Tel. </span>032. 812. 6272<span>Fax. </span>032. 812. 6273</p>
+                  <p><span>Tel. </span>032. 812. 6272 <span id="infoFax">Fax. </span>032. 812. 6273</p>
                   <p><span>Email. </span>printis001@hanmail.net</p>
                 </MDBAnimation>
               </li>
@@ -167,7 +167,7 @@ class NewsList extends Component {
           {this.state.newsLatest.length !== 0 ? (
             this.state.newsLatest.map((newsLatests, i) => (
             <div className="newsItems" key={i}>
-              <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/News/?wr_id="+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
+              <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/News/news/"+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
               <span className="listDateTime">{newsLatests.wr_datetime}</span>
             </div>
             ))
@@ -189,22 +189,22 @@ function PrintProducts(state) {
       {
         "productImg":print_1,
         "productSbuject":"인쇄장비",
-        "links": "/Print/print/"
+        "links": "/Print/prints/print"
       },
       {
         "productImg":print_2,
         "productSbuject":"라벨장비",
-        "links": "/Print/label/"
+        "links": "/Print/prints/label/"
       },
       {
         "productImg":print_3,
         "productSbuject":"제판장비",
-        "links": "/Print/engraving/"
+        "links": "/Print/prints/engraving/"
       },
       {
         "productImg":print_4,
         "productSbuject":"건조장비",
-        "links": "/Print/dry/"
+        "links": "/Print/prints/dry/"
       }
     ]
   }
@@ -235,17 +235,17 @@ function AutoProducts(state) {
       {
         "productImg":auto_1,
         "productSbuject":"TOUCH 장비",
-        "links" : "/Automation/"
+        "links" : "/Automation/autos/touch"
       },
       {
         "productImg":auto_2,
         "productSbuject":"로보트자동화",
-        "links" : "/Automation/"
+        "links" : "/Automation/autos/robot/"
       },
       {
         "productImg":auto_3,
-        "productSbuject":"제판장비",
-        "links" : "/Automation/"
+        "productSbuject":"자동화장비",
+        "links" : "/Automation/autos/auto/"
       }
     ]
   }
