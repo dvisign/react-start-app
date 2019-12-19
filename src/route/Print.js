@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import BoardList from 'components/board/BoardList';
-import BoardView from 'components/board/BoardView';
+import List from 'components/board/List';
+import View from 'components/board/View';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
@@ -49,11 +49,11 @@ class Print extends Component {
                 <Route 
                   exact 
                   path={`/:page?/:board?/:category`} 
-                  component={BoardList}
+                  component={List}
                 />
                 <Route  
                   path={`/:page?/:board?/:category?/:id`} 
-                  component={BoardView}
+                  component={View}
                 />
               </Switch>
             </MDBContainer>

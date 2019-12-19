@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {MDBAnimation} from 'mdbreact';
 import * as board from'service/board';
 
-class BoardList extends Component {
+class List extends Component {
   state = {
     boardList:[]
   }
@@ -25,8 +25,7 @@ class BoardList extends Component {
     }));
   }
   render() {
-    console.log("list render")
-    return (
+    return(
       <div>
         {
           this.state.boardList.length === 0 ? (
@@ -38,7 +37,7 @@ class BoardList extends Component {
             {this.state.boardList.map((lists, i)=>(
               <div className="boardItems" key={i}>
                 <MDBAnimation reveal type="fadeInUp" delay={i*0.1+"s"}>
-                  <Link to={"/"+this.props.match.params.page+"/"+this.props.match.params.board+"/"+this.props.match.params.category+"/"+lists.wr_id}>
+                  <Link to={this.props.match.url+"/"+lists.wr_id}>
                     <div className="boardListThumbs">
                       <img src={lists.wr_img} alt={"프린티스 "+lists.wr_subject} title={"프린티스 "+lists.wr_subject} />
                     </div>
@@ -57,4 +56,4 @@ class BoardList extends Component {
   }
 }
 
-export default BoardList;
+export default List;

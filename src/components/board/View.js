@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as board from'service/board';
 
-class BoardView extends Component {
+class View extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,4 +47,4 @@ class BoardView extends Component {
   }
 }
 
-export default BoardView;
+export default View;

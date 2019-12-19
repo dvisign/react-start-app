@@ -18,7 +18,7 @@ class App extends Component {
             <Route path={"/About"} component={About}/>
             <Route path={"/Print/:board"} component={Print}/>
             <Route path={"/Automation/:board"} component={Automation}/>
-            <Route path={"/News"} component={News}/>
+            <Route path={"/News/:board"} component={News}/>
             <Route component={NoMatchPage}/>
           </Switch>
         </div>

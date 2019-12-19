@@ -25,7 +25,7 @@ class Nav extends Component {
                 <Link to={"/Automation/autos/touch"}>자동화장비</Link>
               </li>
               <li>
-                <Link to={"/News"}>News</Link>
+                <Link to={"/News/news"}>News</Link>
               </li>
             </ul>
           </div>
