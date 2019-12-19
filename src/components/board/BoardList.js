@@ -30,7 +30,7 @@ class BoardList extends Component {
             {this.state.list.map((lists, i)=>(
               <div className="boardItems" key={i}>
                 <MDBAnimation reveal type="fadeInUp" delay={i*0.1+"s"}>
-                  <Link to={"/printis/"+this.state.page+"/"+this.state.category+"/?wr_id="+lists.wr_id}>
+                  <Link to={"/"+this.state.page+"/"+this.state.category+"/?wr_id="+lists.wr_id}>
                     <div className="boardListThumbs">
                       <img src={lists.wr_img} alt={"프린티스 "+lists.wr_subject} title={"프린티스 "+lists.wr_subject} />
                     </div>

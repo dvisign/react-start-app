@@ -30,11 +30,11 @@ class Print extends Component {
   }
   componentDidUpdate(prevProps, prevState){
     if (this.props !== prevProps) {
-      this.getListData(window.location.host ,"printlist", this.state.bo_table, this.state.category, 1);
+      this.getListData(window.location.host ,"list", this.state.bo_table, this.state.category, 1);
     }
   }
   componentDidMount() {
-    this.getListData(window.location.host ,"printlist", this.state.bo_table, this.state.category, 1);
+    this.getListData(window.location.host ,"list", this.state.bo_table, this.state.category, 1);
     event.pagenations("Print", "2")
   }
   getListData = async (server,status, bo_table, category, leng) => {
@@ -48,6 +48,7 @@ class Print extends Component {
   }
   render() {
     const query = queryString.parse(this.props.location.search);
+    console.log(this.props)
     return ( 
       <main id="printPage">
         <PageHeader 
@@ -61,16 +62,16 @@ class Print extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Print/print/"}>인쇄장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/print/"}>인쇄장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Print/label/"}>라벨장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/label/"}>라벨장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Print/engraving/"}>제판설비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/engraving/"}>제판설비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Print/dry/"}>건조장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/dry/"}>건조장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>

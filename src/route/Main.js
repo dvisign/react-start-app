@@ -128,13 +128,15 @@ class NewsList extends Component {
     var listData = await Promise.all([
       board.latestList(server, status, bo_table, sort, leng)
     ])
-    this.setState(prevState => ({
-      ...prevState,
-      selectid : listData[0][0].wr_id,
-      selectImg : listData[0][0].wr_img,
-      selectAlt : listData[0][0].wr_subject,
-      newsLatest : listData[0]
-    }));
+    if (listData[0].length > 0) {
+      this.setState(prevState => ({
+        ...prevState,
+        selectid : listData[0][0].wr_id,
+        selectImg : listData[0][0].wr_img,
+        selectAlt : listData[0][0].wr_subject,
+        newsLatest : listData[0]
+      }));
+    }
   }
   newslatest = (data) => {
     this.setState({
@@ -148,20 +150,34 @@ class NewsList extends Component {
     return (
       <div id="newsListContents" className="clear">
         <div id="newsThumbs">
+        {this.state.newsLatest.length !== 0 ? (
           <div>
             <img src={this.state.selectImg} alt={this.state.selectAlt} />
           </div>
+        ) : (
+          <div>
+            <img src="http://printis.co.kr/gnu/img/no_img.png" alt="이미지 없음" title="이미지 없음" />
+          </div>
+        )}
         </div>
         <div className="newsLists">
           <div>
             <h2 className="sectionSubTitles">NEWS</h2>
           </div>
-          {this.state.newsLatest.map((newsLatests, i) => (
-          <div className="newsItems" key={i}>
-            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/printis/News/?wr_id="+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
-            <span className="listDateTime">{newsLatests.wr_datetime}</span>
-          </div>
-          ))}
+          {this.state.newsLatest.length !== 0 ? (
+            this.state.newsLatest.map((newsLatests, i) => (
+            <div className="newsItems" key={i}>
+              <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/News/?wr_id="+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
+              <span className="listDateTime">{newsLatests.wr_datetime}</span>
+            </div>
+            ))
+          ) : (
+            <div className="newsItems">
+              <NavLink to="/">작성된 글이 없습니다.</NavLink>
+              <span className="listDateTime"></span>
+            </div>
+          )}
+          
         </div>
       </div>
     )
@@ -173,22 +189,22 @@ function PrintProducts(state) {
       {
         "productImg":print_1,
         "productSbuject":"인쇄장비",
-        "links": "/printis/Print/print/"
+        "links": "/Print/print/"
       },
       {
         "productImg":print_2,
         "productSbuject":"라벨장비",
-        "links": "/printis/Print/label/"
+        "links": "/Print/label/"
       },
       {
         "productImg":print_3,
         "productSbuject":"제판장비",
-        "links": "/printis/Print/engraving/"
+        "links": "/Print/engraving/"
       },
       {
         "productImg":print_4,
         "productSbuject":"건조장비",
-        "links": "/printis/Print/dry/"
+        "links": "/Print/dry/"
       }
     ]
   }
@@ -219,17 +235,17 @@ function AutoProducts(state) {
       {
         "productImg":auto_1,
         "productSbuject":"TOUCH 장비",
-        "links" : "/printis/Automation/"
+        "links" : "/Automation/"
       },
       {
         "productImg":auto_2,
         "productSbuject":"로보트자동화",
-        "links" : "/printis/Automation/"
+        "links" : "/Automation/"
       },
       {
         "productImg":auto_3,
         "productSbuject":"제판장비",
-        "links" : "/printis/Automation/"
+        "links" : "/Automation/"
       }
     ]
   }

@@ -61,13 +61,13 @@ class Automation extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Automation/touch/"}>터치설비 / 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/touch/"}>터치설비 / 장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Automation/robot/"}>로보트 자동화</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/robot/"}>로보트 자동화</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/printis/Automation/auto/"}>자동설비 / 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/auto/"}>자동설비 / 장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>

@@ -10,22 +10,22 @@ class Nav extends Component {
         <Container>
           <div className="clear">
             <div id="logos">
-              <Link to={"/printis/"}>
+              <Link to={"/"}>
                 <img src={Logo} alt="printis 로고"/>
               </Link>
             </div>
             <ul id="navList">
               <li>
-                <Link to={"/printis/About"}>회사소개</Link>
+                <Link to={"/About"}>회사소개</Link>
               </li>
               <li>
-                <Link to={"/printis/Print/print"}>인쇄장비</Link>
+                <Link to={"/Print/print"}>인쇄장비</Link>
               </li>
               <li>
-                <Link to={"/printis/Automation/touch"}>자동화장비</Link>
+                <Link to={"/Automation/touch"}>자동화장비</Link>
               </li>
               <li>
-                <Link to={"/printis/News"}>News</Link>
+                <Link to={"/News"}>News</Link>
               </li>
             </ul>
           </div>

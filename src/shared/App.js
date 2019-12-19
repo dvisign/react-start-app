@@ -14,11 +14,11 @@ class App extends Component {
         <Nav />
         <div id="Route">
           <Switch>
-            <Route exact path={"/printis/"} component={Main}/>
-            <Route path={"/printis/About"} component={About}/>
-            <Route path={"/printis/Print/:category"} component={Print}/>
-            <Route path={"/printis/Automation/:category"} component={Automation}/>
-            <Route path={"/printis/News"} component={News}/>
+            <Route exact path={"/"} component={Main}/>
+            <Route path={"/About"} component={About}/>
+            <Route path={"/Print/:category"} component={Print}/>
+            <Route path={"/Automation/:category"} component={Automation}/>
+            <Route path={"/News"} component={News}/>
             <Route component={NoMatchPage}/>
           </Switch>
         </div>
