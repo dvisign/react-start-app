@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import * as board from'service/board';
+import { NavLink, Switch, Route } from 'react-router-dom';
 import BoardList from 'components/board/BoardList';
 import BoardView from 'components/board/BoardView';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
-import queryString from 'query-string';
 import * as event from'service/event';
 // css, scss
 import "css/auto.scss";
@@ -13,41 +11,11 @@ import "css/auto.scss";
 import headerImg from 'img/print/pageheader.jpg';
 
 class Automation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bo_table:"autos",
-      category:"",
-      boardList : []
-    };
-  }
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.match.params !== prevState.board) {
-      return {
-        category : nextProps.match.params.category
-      }
-    }
-  }
-  componentDidUpdate(prevProps, prevState){
-    if (this.props !== prevProps) {
-      this.getListData(window.location.host ,"printlist", this.state.bo_table, this.state.category, 1);
-    }
-  }
   componentDidMount() {
-    this.getListData(window.location.host ,"printlist", this.state.bo_table, this.state.category, 1);
-    event.pagenations("Automation", "3")
-  }
-  getListData = async (server,status, bo_table, category, leng) => {
-    var listData = await Promise.all([
-      board.getList(server, status, bo_table, category, leng)
-    ])
-    this.setState(prevState => ({
-      ...prevState,
-      boardList : listData[0]
-    }));
+    event.pagenations("Print", "3")
   }
   render() {
-    const query = queryString.parse(this.props.location.search);
+    console.log("auto page render")
     return (
       <main id="autoPage">
         <PageHeader 
@@ -61,30 +29,30 @@ class Automation extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/touch/"}>터치설비 / 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/touch/"}>터치설비 / 장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/robot/"}>로보트 자동화</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/robot/"}>로보트 자동화</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/auto/"}>자동설비 / 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/auto/"}>자동설비 / 장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>
           </div>
           <div id="autoConts" className="boardListConts">
-          <MDBContainer>
-              {!query.wr_id ? (
-                <BoardList 
-                  page="Automation"
-                  list={this.state} 
+            <MDBContainer>
+              <Switch>
+                <Route 
+                  exact 
+                  path={`/:page?/:board?/:category`} 
+                  component={BoardList}
                 />
-              ) : (
-                <BoardView 
-                  wr_id={query.wr_id} 
-                  bo_table={this.state.bo_table} 
+                <Route  
+                  path={`/:page?/:board?/:category?/:id`} 
+                  component={BoardView}
                 />
-              )}
+              </Switch>
             </MDBContainer>
           </div>
         </section>

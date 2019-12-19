@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import * as board from'service/board';
 import BoardList from 'components/board/BoardList';
 import BoardView from 'components/board/BoardView';
 import PageHeader from 'components/PageHeader';
@@ -12,40 +11,11 @@ import "css/print.scss";
 import headerImg from 'img/print/pageheader.jpg';
 
 class Print extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bo_table:"prints",
-      category:"",
-      boardList : []
-    };
-  }
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.match.params !== prevState.board) {
-      return {
-        category : nextProps.match.params.category
-      }
-    }
-  }
-  componentDidUpdate(prevProps, prevState){
-    if (this.props !== prevProps) {
-      this.getListData(window.location.host ,"list", this.state.bo_table, this.state.category, 1);
-    }
-  }
   componentDidMount() {
-    this.getListData(window.location.host ,"list", this.state.bo_table, this.state.category, 1);
     event.pagenations("Print", "2")
   }
-  getListData = async (server,status, bo_table, category, leng) => {
-    var listData = await Promise.all([
-      board.getList(server, status, bo_table, category, leng)
-    ])
-    this.setState(prevState => ({
-      ...prevState,
-      boardList : listData[0]
-    }));
-  }
   render() {
+    console.log("print page render")
     return ( 
       <main id="printPage">
         <PageHeader 
@@ -59,16 +29,16 @@ class Print extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/print/"}>인쇄장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/print/"}>인쇄장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/label/"}>라벨장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/label/"}>라벨장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/engraving/"}>제판설비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/engraving/"}>제판설비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/dry/"}>건조장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/dry/"}>건조장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>
@@ -78,11 +48,11 @@ class Print extends Component {
               <Switch>
                 <Route 
                   exact 
-                  path={this.props.match.url} 
-                  render={props=><BoardList list={this.state} page="Print" />}
+                  path={`/:page?/:board?/:category`} 
+                  component={BoardList}
                 />
                 <Route  
-                  path={`/:category?/:id`} 
+                  path={`/:page?/:board?/:category?/:id`} 
                   component={BoardView}
                 />
               </Switch>
@@ -93,5 +63,4 @@ class Print extends Component {
     )
   }
 }
-
 export default Print;

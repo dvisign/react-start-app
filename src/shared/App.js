@@ -16,8 +16,8 @@ class App extends Component {
           <Switch>
             <Route exact path={"/"} component={Main}/>
             <Route path={"/About"} component={About}/>
-            <Route path={"/Print/:category"} component={Print}/>
-            <Route path={"/Automation/:category"} component={Automation}/>
+            <Route path={"/Print/:board"} component={Print}/>
+            <Route path={"/Automation/:board"} component={Automation}/>
             <Route path={"/News"} component={News}/>
             <Route component={NoMatchPage}/>
           </Switch>

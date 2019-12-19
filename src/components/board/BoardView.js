@@ -11,11 +11,11 @@ class BoardView extends Component {
   }
   componentDidUpdate(prevProps, prevState){
     if (this.props !== prevProps) {
-      this.getViewData(window.location.host ,"view", this.props.bo_table, this.props.wr_id);
+      this.getViewData(window.location.host ,"view", this.props.match.params.board, this.props.match.params.id);
     }
   }
   componentDidMount() {
-    this.getViewData(window.location.host ,"view", this.props.bo_table, this.props.wr_id);
+    this.getViewData(window.location.host ,"view", this.props.match.params.board, this.props.match.params.id);
   }
   getViewData = async (server,status, bo_table, wr_id) => {
     var viewData = await Promise.all([
@@ -27,6 +27,7 @@ class BoardView extends Component {
     }));
   }
   render() {
+    console.log("view render")
     return (
       <div id="boardView">
         <div id="boardProducts">

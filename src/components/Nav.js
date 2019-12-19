@@ -19,10 +19,10 @@ class Nav extends Component {
                 <Link to={"/About"}>회사소개</Link>
               </li>
               <li>
-                <Link to={"/Print/print"}>인쇄장비</Link>
+                <Link to={"/Print/prints/print"}>인쇄장비</Link>
               </li>
               <li>
-                <Link to={"/Automation/touch"}>자동화장비</Link>
+                <Link to={"/Automation/autos/touch"}>자동화장비</Link>
               </li>
               <li>
                 <Link to={"/News"}>News</Link>
