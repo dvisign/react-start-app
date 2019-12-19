@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import {MDBContainer, MDBAnimation} from 'mdbreact';
+import {MDBContainer} from 'mdbreact';
 import * as board from'service/board';
 import { NavLink } from 'react-router-dom';
 import Swiper from 'react-id-swiper';
 import GoogleMaps from 'components/GoogleMaps';
 import * as event from'service/event';
+import ScrollAnimation from 'react-animate-on-scroll';
 // css, scss
 import "css/main.scss"
 import 'swiper/css/swiper.css'
@@ -42,10 +43,10 @@ class Main extends Component {
       <main id="mainPage">
         <section id="mainBanner">
           <MDBContainer id="bannerTitle">
-            <MDBAnimation reveal type="fadeInUp">
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h2 className="sectionTitles">새로움을 즐기며<br/> 새로운 기술을 선도하는 기업</h2>
               <p className="sectionSubTitles">Printis is creative technology</p>
-            </MDBAnimation>
+            </ScrollAnimation>
           </MDBContainer>
         </section>
         <section id="newsLatest">
@@ -80,22 +81,22 @@ class Main extends Component {
           <MDBContainer>
             <ul id="contactInfo" className="clear">
               <li>
-                <MDBAnimation reveal type="fadeInUp" delay="0">
+                <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={0}>
                   <h2 className="sectionSubTitles">Contact<br/>Information</h2>
-                </MDBAnimation>
+                </ScrollAnimation>
               </li>
               <li>
-                <MDBAnimation reveal type="fadeInUp" delay="0.3s">
+                <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300}>
                   <h2 className="sectionSubTitles">010. 9181. 4265</h2>
                   <p><span>Tel. </span>032. 812. 6272 <span id="infoFax">Fax. </span>032. 812. 6273</p>
                   <p><span>Email. </span>printis001@hanmail.net</p>
-                </MDBAnimation>
+                </ScrollAnimation>
               </li>
               <li>
-                <MDBAnimation reveal type="fadeInUp" delay="0.6s">
+                <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={600}>
                   <p>인천광역시 남동구 남동동로 33번길 10<br/> 2동 (154B 9L)</p>
                   <p>2 dong, 10 Namdongdong-ro<br/>33beon-gil, Namdong-go,<br/>Inccheon, Republic of Korea</p>
-                </MDBAnimation>
+                </ScrollAnimation>
               </li>
             </ul>
           </MDBContainer>
@@ -213,7 +214,7 @@ function PrintProducts(state) {
         <ul id="printList" className="clear">
         {state.printlist.map((printlists, i)=>(
           <li key={i} id={"printlists_"+i} onMouseOver={(e) => event.overEvent("#printList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#printList","li")}>
-            <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i*300}>
               <NavLink to={printlists.links}>
                 <div className="productTitle">
                   <h2>{printlists.productSbuject}</h2>
@@ -222,7 +223,7 @@ function PrintProducts(state) {
                   <img src={printlists.productImg} alt={"프린티스 "+printlists.productSbuject} />
                 </div>
               </NavLink>
-            </MDBAnimation>
+            </ScrollAnimation>
           </li>
         ))}
         </ul>
@@ -254,7 +255,7 @@ function AutoProducts(state) {
         <ul id="autoList" className="clear">
         {state.autolist.map((autolists, i)=>(
           <li key={i} id={"autolists_"+i} onMouseOver={(e) => event.overEvent("#autoList","li",i+1)} onMouseLeave={(e) => event.leaveEvent("#autoList","li")}>
-            <MDBAnimation reveal type="fadeInUp" delay={i*0.3+"s"}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i*300}>
               <NavLink to={autolists.links}>
                 <div className="productTitle">
                   <h2>{autolists.productSbuject}</h2>
@@ -263,7 +264,7 @@ function AutoProducts(state) {
                   <img src={autolists.productImg} alt={"프린티스 "+autolists.productSbuject} />
                 </div>
               </NavLink>
-            </MDBAnimation>
+            </ScrollAnimation>
           </li>
         ))}
         </ul>

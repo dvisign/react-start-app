@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {MDBAnimation} from 'mdbreact';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class PageHeader extends Component {
   state = {
@@ -25,9 +25,9 @@ class PageHeader extends Component {
     }
     return(
       <div id={"ph_"+this.state.page} className="pageHeader" style={headerBg}>
-        <MDBAnimation reveal type="fadeInUp">
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
           <h2 className="sectionSubTitles">{this.state.pageText}</h2>
-        </MDBAnimation>
+        </ScrollAnimation>
       </div>
     )
   }

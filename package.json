@@ -11,6 +11,7 @@
     "node-sass": "^4.13.0",
     "query-string": "^6.9.0",
     "react": "^16.12.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-app-polyfill": "^1.0.4",
     "react-dom": "^16.12.0",
     "react-google-maps": "^9.4.5",

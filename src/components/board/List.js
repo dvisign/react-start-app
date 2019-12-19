@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom' 
-import {MDBAnimation} from 'mdbreact';
+import ScrollAnimation from 'react-animate-on-scroll';
 import * as board from'service/board';
 
 class List extends Component {
@@ -36,7 +36,7 @@ class List extends Component {
             <div className="boardLists clear">
             {this.state.boardList.map((lists, i)=>(
               <div className="boardItems" key={i}>
-                <MDBAnimation reveal type="fadeInUp" delay={i*0.1+"s"}>
+                <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i*100}>
                   <Link to={this.props.match.url+"/"+lists.wr_id}>
                     <div className="boardListThumbs">
                       <img src={lists.wr_img} alt={"프린티스 "+lists.wr_subject} title={"프린티스 "+lists.wr_subject} />
@@ -45,7 +45,7 @@ class List extends Component {
                       <p>{lists.wr_subject}</p>
                     </div>
                   </Link>
-                </MDBAnimation>
+                </ScrollAnimation>
               </div>
             ))}
             </div>
