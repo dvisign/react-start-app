@@ -29,16 +29,16 @@ class Print extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/prints/print/"}>인쇄장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/print"}>인쇄장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/prints/label/"}>라벨장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/label"}>라벨장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/prints/engraving/"}>제판설비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/engraving"}>제판설비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Print/prints/dry/"}>건조장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Print/prints/dry"}>건조장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>

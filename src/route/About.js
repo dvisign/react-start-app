@@ -18,6 +18,14 @@ import ceoName from 'img/about/ceoname.png';
 import awards_1 from 'img/about/award_1.jpg';
 import awards_2 from 'img/about/award_2.jpg';
 import awards_3 from 'img/about/award_3.jpg';
+import awards_4 from 'img/about/award_4.jpg';
+import awards_5 from 'img/about/award_5.jpg';
+import awards_6 from 'img/about/award_6.jpg';
+import awards_7 from 'img/about/award_7.jpg';
+import awards_8 from 'img/about/award_8.jpg';
+import awards_9 from 'img/about/award_9.jpg';
+import awards_10 from 'img/about/award_10.jpg';
+import awards_11 from 'img/about/award_11.jpg';
 import partner_1 from 'img/about/partner_1.png';
 import partner_2 from 'img/about/partner_2.png';
 import partner_3 from 'img/about/partner_3.png';
@@ -200,6 +208,38 @@ class About extends Component {
       {
         "awardsImg" : awards_3,
         "awardsAlt" : "기술혁신형 중소기업 확인서"
+      },
+      {
+        "awardsImg" : awards_4,
+        "awardsAlt" : "연구개발전담부서 인정서"
+      },
+      {
+        "awardsImg" : awards_5,
+        "awardsAlt" : "기업부설연구소 인정서"
+      },
+      {
+        "awardsImg" : awards_6,
+        "awardsAlt" : "벤처기업확인서"
+      },
+      {
+        "awardsImg" : awards_7,
+        "awardsAlt" : "스크린협회 이사임명장"
+      },
+      {
+        "awardsImg" : awards_11,
+        "awardsAlt" : "한국스크린인쇄공업협회회원증"
+      },
+      {
+        "awardsImg" : awards_8,
+        "awardsAlt" : "중소기업 확인서"
+      },
+      {
+        "awardsImg" : awards_9,
+        "awardsAlt" : "공장등록증"
+      },
+      {
+        "awardsImg" : awards_10,
+        "awardsAlt" : "클린사업장 인증서"
       }
     ],
     parterItems : [
@@ -397,7 +437,7 @@ class About extends Component {
             <div className="subTitArea">
               <h2 className="sectionSubTitles">인증 및 특허</h2>
             </div>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay="0">
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={0}>
               <div id="awardsConts">
                 <div id="awardList">
                   <Swiper {...params}>

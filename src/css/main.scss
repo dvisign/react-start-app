@@ -42,12 +42,14 @@
     padding-top: 6.7%;
     padding-bottom: 7%;
     .sectionSubTitles {
-      color:#ffcc00;
       border-bottom: 2px solid #6f6c64;
       padding-bottom: 4%;
       margin-bottom: 4%;
       line-height: 0.8;
       font-weight: 500;
+      a {
+        color:#ffcc00;
+      }
     }
     img {
       width: 100%;
@@ -88,6 +90,11 @@
   #prints {
     padding-top: 3.76%;
     padding-bottom: 4.28%;
+    .sectionSubTitles {
+      a {
+        color:#ffcc00
+      }
+    }
     #printList {
       li {
         float:left;
@@ -186,6 +193,11 @@
   #autos {
     padding-top: 3.76%;
     padding-bottom: 4.28%;
+    .sectionSubTitles {
+      a {
+        color:#ffcc00
+      }
+    }
     #autoList {
       li {
         float:left;

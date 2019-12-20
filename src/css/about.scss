@@ -213,20 +213,29 @@
     #awardList {
       .swiper-container {
         padding:10px 0 100px 0;
-        .swiper-slide {
-          padding-top: 70px;
-        }
-        img {
-          width:100%;
-          max-width: 268px;
-          box-shadow: 4px 5px 11px 3px rgba(0,0,0,0.5);
-          -webkit-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
-          -moz-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
-        }
-        .swiper-slide-active {
-          padding-top: 0;
+        height: 590px;
+        .swiper-wrapper {
+          height: 100%;
+          .swiper-slide {
+            padding-top: 70px;
+            height: 100%;
+          }
           img {
-            max-width: 340px;
+            width:100%;
+            max-width: 268px;
+            box-shadow: 4px 5px 11px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
+            -moz-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .swiper-slide-active {
+            padding-top: 0;
+            img {
+              max-width: 340px;
+            }
           }
         }
         .swiper-button-next {
@@ -244,9 +253,8 @@
         .swiper-pagination {
           bottom: 0;
           .swiper-pagination-bullet {
-            width: 18px;
-            height: 18px;
-            margin: 0 7px;
+            width: 10px;
+            height: 10px;
             background-color: #939495;
           }
         }

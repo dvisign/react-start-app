@@ -25,6 +25,7 @@ class List extends Component {
     }));
   }
   render() {
+    console.log("list render");
     return(
       <div>
         {

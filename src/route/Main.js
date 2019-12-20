@@ -57,7 +57,9 @@ class Main extends Component {
         <section id="prints">
           <MDBContainer>
             <div className="subTitArea">
-              <h2 className="sectionSubTitles">인쇄장비</h2>
+              <h2 className="sectionSubTitles">
+                <NavLink to={"/Print/prints/print"}>인쇄장비</NavLink>
+              </h2>
             </div>
             <PrintProducts/>
           </MDBContainer>
@@ -65,7 +67,9 @@ class Main extends Component {
         <section id="autos">
           <MDBContainer>
             <div className="subTitArea">
-              <h2 className="sectionSubTitles">자동화장비</h2>
+              <h2 className="sectionSubTitles">
+                <NavLink to={"/Automation/autos/touch"}>자동화장비</NavLink>
+              </h2>
             </div>
             <AutoProducts/>
           </MDBContainer>
@@ -163,7 +167,9 @@ class NewsList extends Component {
         </div>
         <div className="newsLists">
           <div>
-            <h2 className="sectionSubTitles">NEWS</h2>
+            <h2 className="sectionSubTitles">
+              <NavLink to="/News/news">NEWS</NavLink>
+            </h2>
           </div>
           {this.state.newsLatest.length !== 0 ? (
             this.state.newsLatest.map((newsLatests, i) => (

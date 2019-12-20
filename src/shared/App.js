@@ -15,10 +15,10 @@ class App extends Component {
         <div id="Route">
           <Switch>
             <Route exact path={"/"} component={Main}/>
-            <Route path={"/About"} component={About}/>
-            <Route path={"/Print/:board"} component={Print}/>
-            <Route path={"/Automation/:board"} component={Automation}/>
-            <Route path={"/News/:board"} component={News}/>
+            <Route path={"/About/"} component={About}/>
+            <Route path={"/Print/:board/"} component={Print}/>
+            <Route path={"/Automation/:board/"} component={Automation}/>
+            <Route path={"/News/:board/"} component={News}/>
             <Route component={NoMatchPage}/>
           </Switch>
         </div>

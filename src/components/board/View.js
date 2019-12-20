@@ -33,7 +33,7 @@ class View extends Component {
         <div id="boardProducts">
           <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
           <div id="productImg">
-            <div dangerouslySetInnerHTML={{__html: this.state.wr_content}}></div>
+            <div dangerouslySetInnerHTML={{__html: this.state.wr_content}} />
           </div>
           <div id="productOptions">
             <div id="categoryTitle" className="clear">
