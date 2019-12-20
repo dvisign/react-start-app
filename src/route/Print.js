@@ -22,7 +22,7 @@ class Print extends Component {
           page="print"
           pagebg={headerImg}
           pageText="인쇄장비"
-          title="printis 인쇄장비"
+          title="PRINTIS 인쇄장비"
         />
         <section id="printConts">
           <div id="printNavs">

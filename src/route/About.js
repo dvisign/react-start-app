@@ -328,7 +328,7 @@ class About extends Component {
           page="about"
           pagebg={headerImg}
           pageText="회사소개"
-          title="printis 회사소개"
+          title="PRINTIS 회사소개"
         />
         <section id="philosophys" className="subSections">
           <MDBContainer>

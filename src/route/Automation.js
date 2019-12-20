@@ -22,7 +22,7 @@ class Automation extends Component {
           page="Automation"
           pagebg={headerImg}
           pageText="자동화 장비"
-          title="printis 자동화 장비"
+          title="PRINTIS 자동화 장비"
         />
         <section id="printConts">
           <div id="printNavs">

@@ -35,7 +35,7 @@ import partner_15 from 'img/main/partners/logo_15.png';
 
 class Main extends Component {
   componentDidMount() {
-    document.title = "printis"
+    document.title = "PRINTIS"
     event.pagenations("index","0")
   }
   render() {
@@ -92,7 +92,10 @@ class Main extends Component {
               <li>
                 <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300}>
                   <h2 className="sectionSubTitles">010. 9181. 4265</h2>
-                  <p><span>Tel. </span>032. 812. 6272 <span id="infoFax">Fax. </span>032. 812. 6273</p>
+                  <p>
+                    <span className="addressLine"><span>Tel. </span>032. 812. 6272</span>
+                    <span className="addressLine"><span id="infoFax">Fax. </span>032. 812. 6273</span> 
+                  </p>
                   <p><span>Email. </span>printis001@hanmail.net</p>
                 </ScrollAnimation>
               </li>
@@ -161,7 +164,7 @@ class NewsList extends Component {
           </div>
         ) : (
           <div>
-            <img src="http://printis.co.kr/gnu/img/no_img.png" alt="이미지 없음" title="이미지 없음" />
+            <img src="http://printis.co.kr/gnu/img/no_img2.jpg" alt="이미지 없음" title="이미지 없음" />
           </div>
         )}
         </div>

@@ -19,7 +19,7 @@ class News extends Component {
           page="news"
           pagebg={headerImg}
           pageText="뉴스"
-          title="printis 뉴스"
+          title="PRINTIS 뉴스"
         />
         <section>
           <div id="newsConts" className="boardListConts">

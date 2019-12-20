@@ -28,6 +28,10 @@
       color:#fff;
       padding-top: 14%;
       padding-bottom: 6%;
+      @media(max-width:768px) {
+        padding-top: 30%;
+        padding-bottom: 25%;
+      }
       .sectionTitles {
         text-align: left;
       }
@@ -58,10 +62,22 @@
       #newsThumbs {
         float:left;
         width: 40%;
+        @media (max-width: 992px){
+          width: 45%;
+        }
+        @media (max-width:768px) {
+          display: none;
+        }
       }
       .newsLists {
         float:right;
         width:55%;
+        @media (max-width: 992px){
+          width: 50%; 
+        }
+        @media (max-width:768px) {
+          width: 100%;
+        }
         .newsItems {
           margin-bottom: 2.3%;
           position: relative;
@@ -105,6 +121,24 @@
         position: relative;
         padding:30px 40px;
         transition: 0.5s;
+        @media(max-width:1200px) {
+          height: 430px;
+          padding: 20px 30px;
+        }
+        @media (max-width: 992px){
+          width: 50%; 
+          height: 360px;
+          &:first-child {
+            border-bottom: 1px solid rgba(136,136,136,0.2);
+          }
+          &:nth-child(2) {
+            border-bottom: 1px solid rgba(136,136,136,0.2);
+            border-right: 0;
+          }
+          &:last-child {
+            border-right: 0;
+          }
+        }
         .productTitle {
           h2 {
             font-size: 1.3rem;
@@ -124,49 +158,93 @@
           position: absolute;
           bottom: 30px;
           transition: 0.5s;
+          @media (max-width: 992px){
+            bottom: 0;
+          }
         }
         #print_0 {
           right: -40%;
           img {
-            width:100%;
-            min-width: 227px;
+            width: 227px;
+          }
+          @media(max-width:1200px) {
+            right: -42%;
+            img {
+              width: 150px;
+            }
+          }
+          @media (max-width: 992px){
+            right: 0;
           }
         }
         #print_1 {
           right: -75%;
           img {
-            width:100%;
-            min-width: 424px;
+            width: 424px;
+          }
+          @media(max-width:1200px) {
+            right: -90%;
+            img {
+              width: 330px;
+            }
+          }
+          @media (max-width: 992px){
+            right: -30%;
           }
         }
         #print_2 {
           right: -32%;
           img {
-            width:100%;
-            min-width: 227px;
+            width: 227px;
+          }
+          @media(max-width:1200px) {
+            right: -35%;
+            img {
+              width: 180px;
+            }
+          }
+          @media (max-width: 992px){
+            right: -5%;
           }
         }
         #print_3 {
           right: -35%;
           img {
-            width:100%;
-            min-width: 244px;
+            width: 244px;
+          }
+          @media(max-width:1200px) {
+            right: -45%;
+            img {
+              width: 200px;
+            }
+          }
+          @media (max-width: 992px){
+            right: -10%;
           }
         }
       }
       #printlists_0:hover {
         .printThumbs {
           right: 7%;
+          @media(max-width:1200px) {
+            right: 18%;
+          }
         }
       }
       #printlists_1:hover {
         .printThumbs {
           right:-20%;
+          @media(max-width:1200px) {
+            right: -12%;
+          }
         }
       }
       #printlists_2:hover {
         .printThumbs {
           right:10%;
+          @media(max-width:1200px) {
+            right: 9%;
+          }
         }
       }
       #printlists_3:hover {
@@ -183,9 +261,15 @@
             color:#fff;
           }
         }
+        @media (max-width: 992px){
+          width: 50%;
+        }
       }
       .native {
         width:calc((100% - 35%) / 3);
+        @media (max-width: 992px){
+          width: 50%; 
+        }
       }
     }
   }
@@ -199,6 +283,7 @@
       }
     }
     #autoList {
+      text-align: center;
       li {
         float:left;
         width:calc(100% / 3);
@@ -208,6 +293,25 @@
         position: relative;
         padding:30px 40px;
         transition: 0.5s;
+        @media(max-width:1200px) {
+          height: 430px;
+          padding: 20px 30px;
+        }
+        @media (max-width: 992px){
+          height: 360px;
+        }
+        @media (max-width:768px) {
+          width: calc(100% / 2);
+          border-bottom: 1px solid rgba(136,136,136,0.2);
+          &:nth-child(2) {
+            border-right: 0;
+          }
+          &:last-child {
+            width: 100%;
+            border-right: 0;
+            border-bottom: 0;
+          }
+        }
         .fadeInUp {
           height: 100%;
           a {
@@ -217,6 +321,7 @@
           }
         }
         .productTitle {
+          text-align: left;
           h2 {
             font-size: 1.3rem;
             font-weight: 500;
@@ -231,26 +336,52 @@
           position: absolute;
           bottom: 30px;
           transition: 0.5s;
+          @media(max-width: 768px) {
+            bottom: 0;
+          } 
         }
         #auto_0 {
           right: -30%;
           img {
-            width:100%;
-            min-width: 316px;
+            width: 316px;
+          }
+          @media(max-width:1200px) {
+            right: -42%;
+            img {
+              width: 250px;
+            }
           }    
+          @media (max-width: 992px){
+            img {
+              width: 200px;
+            }
+          }
         }
         #auto_1 {
           right: -15%;
           img {
-            width:100%;
-            min-width: 226px;
+            width: 226px;
+          }
+          @media (max-width: 992px){
+            right: -30%;
+            img {
+              width: 180px;
+            }
           }
         }
         #auto_2 {
           right: -44%;
           img {
-            width:100%;
-            min-width: 390px;
+            width: 390px;
+          }
+          @media(max-width:1200px) {
+            right: -42%;
+            img {
+              width: 300px;
+            }
+          }
+          @media (max-width: 768px) {
+            right: 10%;
           }
         }
       }
@@ -262,11 +393,17 @@
       #autolists_1:hover {
         .autoThumbs {
           right: 20%;
+          @media (max-width: 992px){
+            right: 10%;
+          }
         }
       }
       #autolists_2:hover {
         .autoThumbs {
           right: 3%;
+          @media (max-width: 992px){
+            right: -3%;
+          }
         }
       }
       .active {
@@ -278,9 +415,15 @@
             color:#fff;
           }
         }
+        @media(max-width: 768px) {
+          width:50%;
+        }
       }
       .native {
         width:calc((100% - 45%) / 2);
+        @media(max-width: 768px) {
+          width:50%;
+        }
       }
     }
   }
@@ -333,6 +476,45 @@
             text-align: left;
           }
         }
+        @media (max-width: 992px){
+          &:first-child{
+            width:30%;
+          }
+          &:nth-child(2) {
+            width: 40%;
+            .addressLine {
+              display: block;
+              #infoFax {
+                margin-left: 0;
+              }
+            }
+          }
+          &:last-child{
+            width:30%;
+            p {
+              &:first-child {
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        @media(max-width:768px){
+          &:first-child {
+            width: 40%;
+          }
+          &:nth-child(2) {
+            width: 60%;
+            float: right;
+          }
+          &:last-child {
+            margin-top: 10px;
+            float: right;
+            width: 60%;
+            text-align: left;
+          }
+        }
         .sectionSubTitles {
           font-weight: 600;
         }
@@ -350,6 +532,9 @@
   #locations {
     .mapArea {
       height: 600px;
+      @media(max-width: 992px) {
+        height: 400px;
+      }
     }
   }
 }
