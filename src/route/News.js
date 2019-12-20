@@ -5,12 +5,18 @@ import View from 'components/board/View';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
+// css, scss
+import "css/news.scss";
 //img
 import headerImg from 'img/about/pageheader.jpg'
 
 class News extends Component {
   componentDidMount() {
     event.pagenations("News", "4")
+    event.pageIn("#newPage")
+  }
+  componentWillUnmount() {
+    event.pageOut("#newPage")
   }
   render() {
     return (

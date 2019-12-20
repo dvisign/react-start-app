@@ -26,6 +26,7 @@ class List extends Component {
   }
   render() {
     console.log("list render");
+    console.log(this.state.boardList)
     return(
       <div>
         {
@@ -40,7 +41,16 @@ class List extends Component {
                 <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i*100}>
                   <Link to={this.props.match.url+"/"+lists.wr_id}>
                     <div className="boardListThumbs">
-                      <img src={lists.wr_img} alt={"프린티스 "+lists.wr_subject} title={"프린티스 "+lists.wr_subject} />
+                    {
+                      lists.wr_img !== null ?
+                      (
+                        <img src={lists.wr_img} alt={"프린티스 "+lists.wr_subject} title={"프린티스 "+lists.wr_subject} />
+                      )
+                      :
+                      (
+                        <img src="http://printis.co.kr/gnu/img/no_img2.jpg" alt="이미지 없음" title="이미지 없음" />
+                      )
+                    } 
                     </div>
                     <div>
                       <p>{lists.wr_subject}</p>

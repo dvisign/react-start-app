@@ -13,6 +13,10 @@ import headerImg from 'img/print/pageheader.jpg';
 class Print extends Component {
   componentDidMount() {
     event.pagenations("Print", "2")
+    event.pageIn("#printPage")
+  }
+  componentWillUnmount() {
+    event.pageOut("#printPage")
   }
   render() {
     console.log("print page render")

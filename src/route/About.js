@@ -5,8 +5,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import GoogleMaps from 'components/GoogleMaps';
 import Swiper from 'react-id-swiper';
 import * as event from'service/event';
-
-//css, scss
+import { FaDownload } from 'react-icons/fa';
+//css, scss 
 import "css/about.scss";
 //img
 import headerImg from 'img/about/pageheader.jpg'
@@ -307,6 +307,10 @@ class About extends Component {
   }
   componentDidMount() {
     event.pagenations("About", "1")
+    event.pageIn("#aboutPage")
+  }
+  componentWillUnmount() {
+    event.pageOut("#aboutPage")
   }
   render() {
     const params = {
@@ -372,6 +376,9 @@ class About extends Component {
                   <div className="ciItemTxt">
                     <p id="ciSlogan">Printis is creative technology</p>
                     <p id="ciSurpotTxt">PRINT + TECHNOLOGY + IS의 합성어로 만들어진<br/> 브랜드명으로 인쇄관련 장비제작 및 주변 자동화 장비<br/> 제작을 통해 사회에 이바지 하고자 합니다.</p>
+                    <div>
+                      <a id="ciDownload" href="http://printis.co.kr/printis_logo.ai"><FaDownload />다운로드</a>
+                    </div>
                   </div>
                 </ScrollAnimation>
               </div>

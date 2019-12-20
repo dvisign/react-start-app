@@ -19,3 +19,13 @@ export function pagenations(page, index) {
   jQuery("#navList a").removeClass("navActive");
   jQuery("#navList > li:nth-child("+index+") > a").addClass("navActive");
 }
+export function pageIn(target) {
+  jQuery(target).stop().animate({
+    "opacity":"1"
+  },500);
+}
+export function pageOut(target) {
+  jQuery(target).stop().animate({
+    "opacity":"0"
+  },500);
+}

@@ -36,7 +36,11 @@ import partner_15 from 'img/main/partners/logo_15.png';
 class Main extends Component {
   componentDidMount() {
     document.title = "PRINTIS"
-    event.pagenations("index","0")
+    event.pagenations("index","0");
+    event.pageIn("#mainPage")
+  }
+  componentWillUnmount() {
+    event.pageOut("#mainPage")
   }
   render() {
     return (

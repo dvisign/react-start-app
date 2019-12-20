@@ -13,6 +13,10 @@ import headerImg from 'img/print/pageheader.jpg';
 class Automation extends Component {
   componentDidMount() {
     event.pagenations("Print", "3")
+    event.pageIn("#autoPage")
+  }
+  componentWillUnmount() {
+    event.pageOut("#autoPage")
   }
   render() {
     console.log("auto page render")
@@ -29,13 +33,13 @@ class Automation extends Component {
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/autos/touch/"}>TOUCH 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/touch"}>TOUCH 장비</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/autos/robot/"}>로보트 자동화</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/robot"}>로보트 자동화</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName="active" to={"/Automation/autos/auto/"}>자동화 장비</NavLink>
+                  <NavLink activeClassName="active" to={"/Automation/autos/auto"}>자동화 장비</NavLink>
                 </li>
               </ul>
             </MDBContainer>
