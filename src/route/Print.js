@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import List from 'components/board/List';
-import View from 'components/board/View';
+import List from 'components/board/product/List';
+import View from 'components/board/product/View';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
@@ -11,12 +11,21 @@ import "css/print.scss";
 import headerImg from 'img/print/pageheader.jpg';
 
 class Print extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollEvent.bind(this);
+  }
   componentDidMount() {
     event.pagenations("Print", "2")
     event.pageIn("#printPage")
+    window.addEventListener('scroll',this.scrollEvent, false)
   }
   componentWillUnmount() {
     event.pageOut("#printPage")
+    window.removeEventListener('scroll',this.scrollEvent, false)
+  }
+  scrollEvent = () => {
+    event.tabNavs("#printNavs");
   }
   render() {
     console.log("print page render")
@@ -29,7 +38,7 @@ class Print extends Component {
           title="PRINTIS 인쇄장비"
         />
         <section id="printConts">
-          <div id="printNavs">
+          <div id="printNavs" className="tabNavWrapper">
             <MDBContainer>
               <ul id="printNavList" className="clear subNav">
                 <li>

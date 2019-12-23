@@ -9,11 +9,11 @@ class List extends Component {
   }
   componentDidUpdate(prevProps, prevState){
     if (this.props !== prevProps) {
-      this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 1);
+      this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 0);
     }
   }
   componentDidMount() {
-    this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 1);
+    this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 0);
   }
   getListData = async (server,status, bo_table, category, leng) => {
     var listData = await Promise.all([
@@ -25,8 +25,6 @@ class List extends Component {
     }));
   }
   render() {
-    console.log("list render");
-    console.log(this.state.boardList)
     return(
       <div>
         {

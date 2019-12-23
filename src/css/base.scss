@@ -202,34 +202,58 @@ a:hover {text-decoration:none}
   padding-top: 7.3%;
   padding-bottom: 7.3%;
   color:#fff;
+  @media(max-width:992px){
+    padding-top: 13%;
+    padding-bottom: 13%;
+  }
+  @media(max-width:576px){
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   .sectionSubTitles {
     margin-bottom: 0;
     font-weight: 600;
   }
 }
 // 탭 네비게이션
-.subNav {
-  text-align: center;
-  border: 1px solid #ccc;
-  li {
-    float:left;
-    height: 50px;
-    line-height: 50px;
-    border-right: 1px solid #ccc;
-    &:last-child {
-      border-right: 0;
+.tabNavWrapper {
+  width:100%;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.5s;
+  @media(max-width:576px) {
+    .container {
+      padding: 0;
     }
-    a {
-      color:#686868;
-      display:block;
-      width: 100%;
-      font-size: 0.8rem;
-      transition: 0.5s;
-      font-weight: 600;
-    }
-    .active {
-      background-color: #ffcc00;
-      color:#fff;
+  }
+  .subNav {
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 0;
+    li {
+      float:left;
+      height: 50px;
+      line-height: 50px;
+      border-right: 1px solid #ccc;
+      @media(max-width:992px) {
+        height:40px;
+        line-height: 40px;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      a {
+        color:#686868;
+        display:block;
+        width: 100%;
+        font-size: 0.8rem;
+        transition: 0.5s;
+        font-weight: 600;
+      }
+      .active {
+        background-color: #ffcc00;
+        color:#fff;
+      }
     }
   }
 }
@@ -248,6 +272,21 @@ a:hover {text-decoration:none}
       float:left;
       width: calc(100% / 3);
       min-height: 300px;
+      padding:0 10px;
+      @media(max-width:1200px) {
+        min-height: 250px;
+        margin-bottom: 30px;
+      }
+      @media(max-width:992px) {
+        width: 50%;
+        min-height: 260px;
+      }
+      @media(max-width:768px) {
+        min-height: 190px;
+      }
+      @media(max-width:576px) {
+        min-height: 130px;        
+      }
       a {
         display: block;
         width: 100%;
@@ -256,11 +295,17 @@ a:hover {text-decoration:none}
         font-size: 0.785rem;
         .boardListThumbs {
           margin-bottom: 40px;
+          @media(max-width:768px) {
+            margin-bottom: 20px;
+          }
         }
         p {
           word-break: keep-all;
           width: 50%;
           margin: 0 auto;
+          @media(max-width:576px) {
+            width: 100%;
+          }
         }
         img {
           width: 100%;

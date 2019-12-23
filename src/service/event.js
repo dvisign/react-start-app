@@ -29,3 +29,28 @@ export function pageOut(target) {
     "opacity":"0"
   },500);
 }
+export function tabNavs(target) {
+  var animateStart = false;
+  var scrollPos = jQuery(window).scrollTop();
+  var targetPos = jQuery(".boardListConts").offset().top;
+  var navHeight = jQuery("#mainNavs").height();
+  if (scrollPos > targetPos) {
+    if (animateStart === false) {
+      animateStart = true;
+      jQuery(target).css({
+        "position":"fixed",
+        "top":navHeight+"px"
+      })
+      animateStart = false;
+    }
+  }else {
+    if (animateStart === false) {
+      animateStart = true;
+      jQuery(target).css({
+        "position":"static",
+        "top":"0"
+      })
+      animateStart = false;
+    }
+  }
+}

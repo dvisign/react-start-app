@@ -47,7 +47,7 @@ class Nav extends Component {
                   <Link to={"/Automation/autos/touch"}>자동화장비</Link>
                 </li>
                 <li>
-                  <Link to={"/News/news"}>News</Link>
+                  <Link to={"/News/news/1"}>News</Link>
                 </li>
               </ul>
               <div id="mNavBtnWrapper">
@@ -81,7 +81,7 @@ class MobileNav extends Component {
               <Link to={"/Automation/autos/touch"}>자동화장비</Link>
             </li>
             <li>
-              <Link to={"/News/news"}>News</Link>
+              <Link to={"/News/news/1"}>News</Link>
             </li>
           </ul>
         </MDBContainer>

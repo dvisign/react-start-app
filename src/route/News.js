@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import List from 'components/board/List';
-import View from 'components/board/View';
+import List from 'components/board/news/List';
+import View from 'components/board/news/View';
 import PageHeader from 'components/PageHeader';
 import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
@@ -33,11 +33,11 @@ class News extends Component {
               <Switch>
                 <Route 
                   exact
-                  path={`/:page?/:board`}
+                  path={`/:page?/:board/:pager`}
                   component={List}
                 />
                 <Route 
-                  path={`/:page?/:board?/:id`}
+                  path={`/:page?/:board?/:pager?/:id`}
                   component={View}
                 />
               </Switch>

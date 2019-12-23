@@ -314,7 +314,7 @@ class About extends Component {
   }
   render() {
     const params = {
-      slidesPerView: 3,
+      slidesPerView: 1,
       loop : true,
       centeredSlides: true,
       navigation: {
@@ -324,6 +324,23 @@ class About extends Component {
       pagination: {
         el: '.swiper-pagination',
         clickable: true
+      },
+      breakpoints : {
+        1200 : {
+          slidesPerView: 3,
+        },
+        992 : {
+          slidesPerView: 3,
+        },
+        768 : {
+          slidesPerView: 3,
+        },
+        576 : {
+          slidesPerView: 1,
+        },
+        380 : {
+          slidesPerView: 1,
+        }
       }
     }
     return (
