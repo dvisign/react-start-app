@@ -6,6 +6,8 @@ class View extends Component {
     super(props);
     this.state = {
       wr_subject : "",
+      wr_datetime : "",
+      wr_name : "",
       wr_content : ""
     }
   }
@@ -23,24 +25,19 @@ class View extends Component {
     ])
     this.setState(prevState => ({
       wr_subject : viewData[0][0]["wr_subject"],
+      wr_datetime : viewData[0][0]["wr_datetime"],
+      wr_name : viewData[0][0]["wr_name"],
       wr_content : viewData[0][0]["wr_content"]
     }));
   }
   render() {
     console.log("view render")
+    console.log(this.state)
     return (
       <div id="boardView">
-        <div id="boardProducts">
-          <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
-          <div id="productImg">
-            <div dangerouslySetInnerHTML={{__html: this.state.wr_content}} />
-          </div>
-          <div id="productOptions">
-            <div id="categoryTitle" className="clear">
-              <div className="optionCategory">구분</div>
-              <div className="optionText">세부사항</div>
-            </div>
-          </div>
+        <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
+        <div id="productImg">
+          <div dangerouslySetInnerHTML={{__html: this.state.wr_content}} />
         </div>
       </div>
     )

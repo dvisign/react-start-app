@@ -181,7 +181,7 @@ class NewsList extends Component {
           {this.state.newsLatest.length !== 0 ? (
             this.state.newsLatest.map((newsLatests, i) => (
             <div className="newsItems" key={i}>
-              <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/News/news/"+newsLatests.wr_id}>{newsLatests.wr_subject}</NavLink>
+            <NavLink onMouseOver={(e)=>this.newslatest(newsLatests)} to={"/News/news/"+newsLatests.pager+"/"+newsLatests.wr_id}><span>{newsLatests.wr_subject}</span>{newsLatests.wr_todays===true?(<span className="newList"><img src="http://printis.co.kr/gnu/skin/board/basic/img/icon_new.gif" alt="새로운 글" /></span>):""}</NavLink>
               <span className="listDateTime">{newsLatests.wr_datetime}</span>
             </div>
             ))

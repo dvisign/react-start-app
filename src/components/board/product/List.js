@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom' 
 import ScrollAnimation from 'react-animate-on-scroll';
 import * as board from'service/board';
+import './style.scss';
 
 class List extends Component {
   state = {
@@ -9,15 +10,15 @@ class List extends Component {
   }
   componentDidUpdate(prevProps, prevState){
     if (this.props !== prevProps) {
-      this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 0);
+      this.getListData(window.location.host ,"product", this.props.match.params.board, this.props.match.params.category, 0, "wr_id");
     }
   }
   componentDidMount() {
-    this.getListData(window.location.host ,"list", this.props.match.params.board, this.props.match.params.category, 0);
+    this.getListData(window.location.host ,"product", this.props.match.params.board, this.props.match.params.category, 0, "wr_id");
   }
-  getListData = async (server,status, bo_table, category, leng) => {
+  getListData = async (server,status, bo_table, category, leng, sort) => {
     var listData = await Promise.all([
-      board.getList(server, status, bo_table, category, leng)
+      board.getList(server, status, bo_table, category, leng, sort)
     ])
     this.setState(prevState => ({
       ...prevState,
@@ -29,16 +30,16 @@ class List extends Component {
       <div>
         {
           this.state.boardList.length === 0 ? (
-            <div className="boardLists" id="emptyList">
+            <div className="productList" id="emptyList">
               작성글 또는 제품이 없습니다.
             </div>
           ) : (
-            <div className="boardLists clear">
+            <div className="productList clear">
             {this.state.boardList.map((lists, i)=>(
-              <div className="boardItems" key={i}>
+              <div className="productItems" key={i}>
                 <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i*100}>
                   <Link to={this.props.match.url+"/"+lists.wr_id}>
-                    <div className="boardListThumbs">
+                    <div className="productListThumbs">
                     {
                       lists.wr_img !== null ?
                       (
