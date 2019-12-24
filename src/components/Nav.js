@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {MDBContainer} from 'mdbreact';
-import Logo from 'img/public/NavLogo.png';
 import jQuery from 'jquery';
 class Nav extends Component {
   state = {
@@ -33,7 +32,7 @@ class Nav extends Component {
             <div className="clear">
               <div id="logos">
                 <Link to={"/"}>
-                  <img src={Logo} alt="printis 로고"/>
+                  <img src="http://printis.cdn3.cafe24.com/public/NavLogo.png" alt="printis 로고"/>
                 </Link>
               </div>
               <ul id="navList">

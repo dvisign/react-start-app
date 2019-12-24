@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {MDBContainer} from 'mdbreact'
 import { NavLink } from 'react-router-dom';
-import FooterLogo from 'img/public/FooterLogo.png';
 
 class Footer extends Component {
   render() {
@@ -10,7 +9,7 @@ class Footer extends Component {
         <MDBContainer>
           <div className="footerHead">
             <NavLink to="/">
-              <img src={FooterLogo} alt="프린티스" />
+              <img src="http://printis.cdn3.cafe24.com/public/FooterLogo.png" alt="프린티스" />
             </NavLink>
             <span>Printis is creative technology</span>
           </div>
