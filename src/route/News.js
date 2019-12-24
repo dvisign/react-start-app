@@ -7,8 +7,6 @@ import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
 // css, scss
 import "css/news.scss";
-//img
-import headerImg from 'img/about/pageheader.jpg'
 
 class News extends Component {
   componentDidMount() {
@@ -23,7 +21,7 @@ class News extends Component {
       <main id="newPage">
         <PageHeader 
           page="news"
-          pagebg={headerImg}
+          pagebg="http://printis.cdn3.cafe24.com/about/pageheader.jpg"
           pageText="뉴스"
           title="PRINTIS 뉴스"
         />

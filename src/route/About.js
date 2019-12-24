@@ -8,55 +8,22 @@ import * as event from'service/event';
 import { FaDownload } from 'react-icons/fa';
 //css, scss 
 import "css/about.scss";
-//img
-import headerImg from 'img/about/pageheader.jpg'
-import philosophy_1 from 'img/about/philosophy_1.png';
-import philosophy_2 from 'img/about/philosophy_2.png';
-import philosophy_3 from 'img/about/philosophy_3.png';
-import ci from 'img/about/ci.png';
-import ceoName from 'img/about/ceoname.png';
-import awards_1 from 'img/about/award_1.jpg';
-import awards_2 from 'img/about/award_2.jpg';
-import awards_3 from 'img/about/award_3.jpg';
-import awards_4 from 'img/about/award_4.jpg';
-import awards_5 from 'img/about/award_5.jpg';
-import awards_6 from 'img/about/award_6.jpg';
-import awards_7 from 'img/about/award_7.jpg';
-import awards_8 from 'img/about/award_8.jpg';
-import awards_9 from 'img/about/award_9.jpg';
-import awards_10 from 'img/about/award_10.jpg';
-import awards_11 from 'img/about/award_11.jpg';
-import partner_1 from 'img/about/partner_1.png';
-import partner_2 from 'img/about/partner_2.png';
-import partner_3 from 'img/about/partner_3.png';
-import partner_4 from 'img/about/partner_4.png';
-import partner_5 from 'img/about/partner_5.png';
-import partner_6 from 'img/about/partner_6.png';
-import partner_7 from 'img/about/partner_7.png';
-import partner_8 from 'img/about/partner_8.png';
-import partner_9 from 'img/about/partner_9.png';
-import partner_10 from 'img/about/partner_10.png';
-import partner_11 from 'img/about/partner_11.png';
-import partner_12 from 'img/about/partner_12.png';
-import partner_13 from 'img/about/partner_13.png';
-import partner_14 from 'img/about/partner_14.png';
-import partner_15 from 'img/about/partner_15.png';
 
 class About extends Component {
   state = {
     philosophyItems : [
       {
-        "philosophyImg" : philosophy_1,
+        "philosophyImg" : "http://printis.cdn3.cafe24.com/about/philosophy_1.png",
         "philosophyTit" : "고객만족의 품질 제공",
         "philosophyTxt" : "고객만족의 품질 제공"
       },
       {
-        "philosophyImg" : philosophy_2,
+        "philosophyImg" : "http://printis.cdn3.cafe24.com/about/philosophy_2.png",
         "philosophyTit" : "기술적진보",
         "philosophyTxt" : "신기술, 신사업 활성화"
       },
       {
-        "philosophyImg" : philosophy_3,
+        "philosophyImg" : "http://printis.cdn3.cafe24.com/about/philosophy_3.png",
         "philosophyTit" : "바른 경영",
         "philosophyTxt" : "사회와 직원과 함께하는 바른 경영"
       }
@@ -198,109 +165,109 @@ class About extends Component {
     ],
     awardsItems : [
       {
-        "awardsImg" : awards_1,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_1.jpg",
         "awardsAlt" : "품질경영시스템 인증서"
       },
       {
-        "awardsImg" : awards_2,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_2.jpg",
         "awardsAlt" : "가와사키로보틱스 판매인증서"
       },
       {
-        "awardsImg" : awards_3,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_3.jpg",
         "awardsAlt" : "기술혁신형 중소기업 확인서"
       },
       {
-        "awardsImg" : awards_4,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_4.jpg",
         "awardsAlt" : "연구개발전담부서 인정서"
       },
       {
-        "awardsImg" : awards_5,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_5.jpg",
         "awardsAlt" : "기업부설연구소 인정서"
       },
       {
-        "awardsImg" : awards_6,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_6.jpg",
         "awardsAlt" : "벤처기업확인서"
       },
       {
-        "awardsImg" : awards_7,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_7.jpg",
         "awardsAlt" : "스크린협회 이사임명장"
       },
       {
-        "awardsImg" : awards_11,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_11.jpg",
         "awardsAlt" : "한국스크린인쇄공업협회회원증"
       },
       {
-        "awardsImg" : awards_8,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_8.jpg",
         "awardsAlt" : "중소기업 확인서"
       },
       {
-        "awardsImg" : awards_9,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_9.jpg",
         "awardsAlt" : "공장등록증"
       },
       {
-        "awardsImg" : awards_10,
+        "awardsImg" : "http://printis.cdn3.cafe24.com/about/award_10.jpg",
         "awardsAlt" : "클린사업장 인증서"
       }
     ],
     parterItems : [
       {
-        "parterImg" : partner_1,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_1.png",
         "parterTitle" : "삼성"
       },
       {
-        "parterImg" : partner_2,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_2.png",
         "parterTitle" : "LG"
       },
       {
-        "parterImg" : partner_3,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_3.png",
         "parterTitle" : "LG 이노텍"
       },
       {
-        "parterImg" : partner_4,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_4.png",
         "parterTitle" : "희성전자주식회사"
       },
       {
-        "parterImg" : partner_5,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_5.png",
         "parterTitle" : "ILJIN"
       },
       {
-        "parterImg" : partner_6,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_6.png",
         "parterTitle" : "ELK"
       },
       {
-        "parterImg" : partner_7,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_7.png",
         "parterTitle" : "SMAC"
       },
       {
-        "parterImg" : partner_8,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_8.png",
         "parterTitle" : "한국공항공사"
       },
       {
-        "parterImg" : partner_9,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_9.png",
         "parterTitle" : "Markone"
       },
       {
-        "parterImg" : partner_10,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_10.png",
         "parterTitle" : "DigiTech systems"
       },
       {
-        "parterImg" : partner_11,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_11.png",
         "parterTitle" : "이앤에이치"
       },
       {
-        "parterImg" : partner_12,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_12.png",
         "parterTitle" : "INOTOUCH"
       },
       {
-        "parterImg" : partner_13,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_13.png",
         "parterTitle" : "meeredp"
       },
       {
-        "parterImg" : partner_14,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_14.png",
         "parterTitle" : "Yahoo"
       },
       {
-        "parterImg" : partner_15,
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_15.png",
         "parterTitle" : "AVIC"
       }
     ]
@@ -347,7 +314,7 @@ class About extends Component {
       <main id="aboutPage">
         <PageHeader 
           page="about"
-          pagebg={headerImg}
+          pagebg="http://printis.cdn3.cafe24.com/about/pageheader.jpg"
           pageText="회사소개"
           title="PRINTIS 회사소개"
         />
@@ -384,7 +351,7 @@ class About extends Component {
               <div className="ciItems">
                 <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={0}>
                   <div id="ciImgs">
-                    <img src={ci} alt="" />
+                    <img src="http://printis.cdn3.cafe24.com/about/ci.png" alt="printis ci" title="printis ci" />
                   </div>
                 </ScrollAnimation>
               </div>
@@ -415,7 +382,7 @@ class About extends Component {
                 <p className="greetingTxt">프린티스는 끊임없이 변화하는 산업 환경에서 스크린인쇄산업도 새로운 기술로 변화를 이끌어가야 한다는 마음가짐으로 2016년 창립이래 스크린인쇄장비, 건조기, 로보트를 이용한  자동화장비의 다양한 분야에서 지속적인 성장과 발전을 거듭하고 있습니다.<br/><br/><br/>그동안의 축적된 노하우와 경험, 기술과 연구개발를 통해 고객에게 더 좋은 제품과 서비스, 더 큰 만족과 니즈를 충족시켜 드리고자 노력할 것을 약속 드립니다.<br/><br/><br/>끊임없는 새로운 도전과 혁신으로 스크린인쇄 및 자동화 장비분야에서 경쟁력 있는 기업, 착한 기업으로 나아갈수 있도록 최선을 다 할 것입니다. 앞으로도 지속적인 관심과 격려 부탁 드립니다.<br/><br/><br/>감사합니다.</p>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={600}>
-                <p className="ceoNames"><span>프린티스 대표</span><img src={ceoName} alt="프린티스 대표 전병문" /></p>
+                <p className="ceoNames"><span>프린티스 대표</span><img src="http://printis.cdn3.cafe24.com/about/ceoname.png" alt="프린티스 대표 전병문" /></p>
               </ScrollAnimation>
             </div>
           </MDBContainer>

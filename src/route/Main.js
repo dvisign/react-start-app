@@ -9,29 +9,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 // css, scss
 import "css/main.scss"
 import 'swiper/css/swiper.css'
-// img
-import print_1 from 'img/main/print/print_1.png';
-import print_2 from 'img/main/print/print_2.png';
-import print_3 from 'img/main/print/print_3.png';
-import print_4 from 'img/main/print/print_4.png';
-import auto_1 from 'img/main/auto/auto_1.png';
-import auto_2 from 'img/main/auto/auto_2.png';
-import auto_3 from 'img/main/auto/auto_3.png';
-import partner_1 from 'img/main/partners/logo_1.png';
-import partner_2 from 'img/main/partners/logo_2.png';
-import partner_3 from 'img/main/partners/logo_3.png';
-import partner_4 from 'img/main/partners/logo_4.png';
-import partner_5 from 'img/main/partners/logo_5.png';
-import partner_6 from 'img/main/partners/logo_6.png';
-import partner_7 from 'img/main/partners/logo_7.png';
-import partner_8 from 'img/main/partners/logo_8.png';
-import partner_9 from 'img/main/partners/logo_9.png';
-import partner_10 from 'img/main/partners/logo_10.png';
-import partner_11 from 'img/main/partners/logo_11.png';
-import partner_12 from 'img/main/partners/logo_12.png';
-import partner_13 from 'img/main/partners/logo_13.png';
-import partner_14 from 'img/main/partners/logo_14.png';
-import partner_15 from 'img/main/partners/logo_15.png';
 
 class Main extends Component {
   componentDidMount() {
@@ -201,22 +178,22 @@ function PrintProducts(state) {
   state = {
     printlist : [
       {
-        "productImg":print_1,
+        "productImg":"http://printis.cdn3.cafe24.com/main/print/print_1.png",
         "productSbuject":"인쇄장비",
         "links": "/Print/prints/print"
       },
       {
-        "productImg":print_2,
+        "productImg":"http://printis.cdn3.cafe24.com/main/print/print_2.png",
         "productSbuject":"라벨장비",
         "links": "/Print/prints/label/"
       },
       {
-        "productImg":print_3,
+        "productImg":"http://printis.cdn3.cafe24.com/main/print/print_3.png",
         "productSbuject":"제판장비",
         "links": "/Print/prints/engraving/"
       },
       {
-        "productImg":print_4,
+        "productImg":"http://printis.cdn3.cafe24.com/main/print/print_4.png",
         "productSbuject":"건조장비",
         "links": "/Print/prints/dry/"
       }
@@ -247,17 +224,17 @@ function AutoProducts(state) {
   state = {
     autolist : [
       {
-        "productImg":auto_1,
+        "productImg":"http://printis.cdn3.cafe24.com/main/auto/auto_1.png",
         "productSbuject":"TOUCH 장비",
         "links" : "/Automation/autos/touch"
       },
       {
-        "productImg":auto_2,
+        "productImg":"http://printis.cdn3.cafe24.com/main/auto/auto_2.png",
         "productSbuject":"로보트자동화",
         "links" : "/Automation/autos/robot/"
       },
       {
-        "productImg":auto_3,
+        "productImg":"http://printis.cdn3.cafe24.com/main/auto/auto_3.png",
         "productSbuject":"자동화장비",
         "links" : "/Automation/autos/auto/"
       }
@@ -288,63 +265,63 @@ function Partners(state) {
   state = {
     partner : [
       {
-        "logoImg" : partner_1,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_1.png",
         "logoAlt" : "삼성 samsung"
       },
       {
-        "logoImg" : partner_2,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_2.png",
         "logoAlt" : "엘지 LG"
       },
       {
-        "logoImg" : partner_3,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_3.png",
         "logoAlt" : "엘지 이노텍 LG Innotek"
       },
       {
-        "logoImg" : partner_4,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_4.png",
         "logoAlt" : "희성전자 HEESUNG ELECTRONICS"
       },
       {
-        "logoImg" : partner_5,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_5.png",
         "logoAlt" : "ILJIN"
       },
       {
-        "logoImg" : partner_6,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_6.png",
         "logoAlt" : "ELK"
       },
       {
-        "logoImg" : partner_7,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_7.png",
         "logoAlt" : "SMAC"
       },
       {
-        "logoImg" : partner_8,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_8.png",
         "logoAlt" : "한국공항공사"
       },
       {
-        "logoImg" : partner_9,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_9.png",
         "logoAlt" : "Markone"
       },
       {
-        "logoImg" : partner_10,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_10.png",
         "logoAlt" : "Digitech Systems"
       },
       {
-        "logoImg" : partner_11,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_11.png",
         "logoAlt" : "이앤에이치"
       },
       {
-        "logoImg" : partner_12,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_12.png",
         "logoAlt" : "INOTOUCH"
       },
       {
-        "logoImg" : partner_13,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_13.png",
         "logoAlt" : "meeredp"
       },
       {
-        "logoImg" : partner_14,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_14.png",
         "logoAlt" : "Yahoo"
       },
       {
-        "logoImg" : partner_15,
+        "logoImg" : "http://printis.cdn3.cafe24.com/main/partners/logo_15.png",
         "logoAlt" : "AVIC"
       }
     ]

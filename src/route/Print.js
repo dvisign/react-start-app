@@ -7,8 +7,6 @@ import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
 // css, scss
 import "css/print.scss";
-// img
-import headerImg from 'img/print/pageheader.jpg';
 
 class Print extends Component {
   constructor(props) {
@@ -33,7 +31,7 @@ class Print extends Component {
       <main id="printPage">
         <PageHeader 
           page="print"
-          pagebg={headerImg}
+          pagebg="http://printis.cdn3.cafe24.com/print/pageheader.jpg"
           pageText="인쇄장비"
           title="PRINTIS 인쇄장비"
         />

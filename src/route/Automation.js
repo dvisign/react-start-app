@@ -7,8 +7,6 @@ import {MDBContainer} from 'mdbreact';
 import * as event from'service/event';
 // css, scss
 import "css/auto.scss";
-// img
-import headerImg from 'img/print/pageheader.jpg';
 
 class Automation extends Component {
   constructor(props) {
@@ -33,7 +31,7 @@ class Automation extends Component {
       <main id="autoPage">
         <PageHeader 
           page="Automation"
-          pagebg={headerImg}
+          pagebg="http://printis.cdn3.cafe24.com/print/pageheader.jpg"
           pageText="자동화 장비"
           title="PRINTIS 자동화 장비"
         />
