@@ -1,4 +1,5 @@
 import jQuery from 'jquery';
+import axios from 'axios';
 // 부모돔, 자식 컨트롤 돔, 자식돔 index 
 export function overEvent(controllDom, domChild, i) {
   const listEl = jQuery(controllDom + ">" + domChild);
@@ -53,4 +54,20 @@ export function tabNavs(target) {
       animateStart = false;
     }
   }
+}
+export function fileDownloads(files) {
+  return axios.get("/api/",{
+    params : {
+      "status" :  "download",
+      "filename" : files
+    }
+  })
+  .then(response => {
+    const result = response.data;
+    if (result !== false) {
+      window.location.href = "/api/?status=download&filename="+files
+    } else {
+      alert("죄송합니다. 파일 다운로드에 오류가 있습니다.")
+    }
+  })
 }

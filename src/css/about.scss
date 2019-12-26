@@ -91,12 +91,14 @@
               font-weight: 500;
               margin-bottom: 10px;
             }
-            #ciDownload {
+            .ciDownload {
               border:1px solid #bbb;
               font-size: 0.7rem;
-              padding: 5px 7px;
+              padding: 10px 12px;
               color:#bbb;
+              background:#fff;
               transition: 0.5s;
+              margin-right: 10px;
               svg {
                 margin-bottom: 2px;
                 margin-right: 5px;
@@ -332,7 +334,7 @@
           }
           img {
             width:100%;
-            max-width: 240px;
+            max-width: 200px;
             box-shadow: 4px 5px 11px 3px rgba(0,0,0,0.5);
             -webkit-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
             -moz-box-shadow : 4px 5px 11px 3px rgba(0,0,0,0.5);
@@ -350,7 +352,7 @@
           .swiper-slide-active {
             padding-top: 0;
             img {
-              max-width: 320px;
+              max-width: 250px;
               @media(max-width:1200px) {
                 max-width: 230px;
               }
@@ -388,7 +390,7 @@
     li {
       float:left;
       width: calc(100% / 4);
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       &:nth-child(13),
       &:nth-child(14),
       &:nth-child(15) {

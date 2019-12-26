@@ -211,63 +211,63 @@ class About extends Component {
     ],
     parterItems : [
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_1.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_1.jpg",
         "parterTitle" : "삼성"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_2.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_2.jpg",
         "parterTitle" : "LG"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_3.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_3.jpg",
         "parterTitle" : "LG 이노텍"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_4.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_4.jpg",
         "parterTitle" : "희성전자주식회사"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_5.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_5.jpg",
         "parterTitle" : "ILJIN"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_6.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_6.jpg",
         "parterTitle" : "ELK"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_7.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_7.jpg",
         "parterTitle" : "SMAC"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_8.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_8.jpg",
         "parterTitle" : "한국공항공사"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_9.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_9.jpg",
         "parterTitle" : "Markone"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_10.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_10.jpg",
         "parterTitle" : "DigiTech systems"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_11.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_11.jpg",
         "parterTitle" : "이앤에이치"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_12.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_12.jpg",
         "parterTitle" : "INOTOUCH"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_13.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_13.jpg",
         "parterTitle" : "meeredp"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_14.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_14.jpg",
         "parterTitle" : "Yahoo"
       },
       {
-        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_15.png",
+        "parterImg" : "http://printis.cdn3.cafe24.com/about/partner_15.jpg",
         "parterTitle" : "AVIC"
       }
     ]
@@ -361,7 +361,8 @@ class About extends Component {
                     <p id="ciSlogan">Printis is creative technology</p>
                     <p id="ciSurpotTxt">PRINT + TECHNOLOGY + IS의 합성어로 만들어진<br/> 브랜드명으로 인쇄관련 장비제작 및 주변 자동화 장비<br/> 제작을 통해 사회에 이바지 하고자 합니다.</p>
                     <div>
-                      <a id="ciDownload" href="http://printis.co.kr/printis_logo.ai"><FaDownload />다운로드</a>
+                      <button className="ciDownload" onClick={(e) => event.fileDownloads("printis_logo.ai")}><FaDownload />AI 다운로드</button>
+                      <button className="ciDownload" onClick={(e) => event.fileDownloads("printis_logo.jpg")}><FaDownload />JPG 다운로드</button>
                     </div>
                   </div>
                 </ScrollAnimation>
