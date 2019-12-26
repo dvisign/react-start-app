@@ -29,7 +29,7 @@ class View extends Component {
   render() {
     console.log("view render")
     return (
-      <div id="boardView">
+      <div id="boardProductView">
         <div id="boardProducts">
           <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
           <div id="productImg">

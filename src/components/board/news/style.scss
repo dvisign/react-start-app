@@ -103,16 +103,41 @@
   p {
     margin-bottom: 0;
   }
-  .sectionSubTitles {
-    font-weight: 600;
+  #boardHeader {
     margin-bottom: 5.865%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #ccc;
+    #boardSubject {
+      .sectionSubTitles {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+    }
+    #writeInfo {
+      margin-top: 1rem;
+      p {
+        float:left;
+        font-size: 0.686rem;
+        font-weight: 400;
+        color:rgb(109, 109, 109);
+        padding-right: 10px;
+        span {
+          margin-right: 5px;
+        }
+        &:last-child {
+          float:right;
+        }
+      }
+    }
   }
   #boardContents {
     font-size: 0.85rem;
     font-weight: 500;
-    margin-bottom: 5.865%;
+    padding-bottom: 5.865%;
+    border-bottom: 1px solid #ccc;
   }
   #boardNextPrevLink {
+    margin-top: 2.432%;
     a {
       font-size: 0.6rem;
       display: block;

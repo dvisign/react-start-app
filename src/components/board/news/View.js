@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom' 
 import * as board from'service/board';
 // import * as event from'service/event';
-import { IoIosArrowForward, IoIosArrowBack, IoIosList } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack, IoIosList, IoIosEye } from "react-icons/io";
 
 class View extends Component {
   constructor(props) {
@@ -28,7 +28,6 @@ class View extends Component {
   componentDidUpdate(prevProps, prevState, snapshot){
     if (this.props !== prevProps) {
       this.getViewData(window.location.host ,"view", this.props.match.params.board, this.props.match.params.id);
-      console.log(snapshot)
       if (snapshot === true) {
         // event.pageIn("#boardView");
       }
@@ -36,7 +35,6 @@ class View extends Component {
   }
   componentDidMount() {
     this.getViewData(window.location.host ,"view", this.props.match.params.board, this.props.match.params.id);
-    console.log("component did mount")
   }
   getViewData = async (server,status, bo_table, wr_id) => {
     var viewData = await Promise.all([
@@ -46,15 +44,25 @@ class View extends Component {
       wr_subject : viewData[0][0]["wr_subject"],
       wr_datetime : viewData[0][0]["wr_datetime"],
       wr_name : viewData[0][0]["wr_name"],
+      wr_hit : viewData[0][0]["wr_hit"],
       wr_content : viewData[0][0]["wr_content"],
       next_wr_id: viewData[0][0]["next_wr_id"],
       prev_wr_id: viewData[0][0]["prev_wr_id"]
-    }, ()=> console.log("set state"));
+    });
   }
   render() {
     return (
       <div id="boardView">
-        <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
+        <div id="boardHeader">
+          <div id="boardSubject">
+            <h2 className="sectionSubTitles">{this.state.wr_subject}</h2>
+          </div>
+          <div id="writeInfo" className="clear">
+            <p><span>작성자</span><span>{this.state.wr_name}</span></p>
+            <p><span><IoIosEye/></span><span>{this.state.wr_hit}회</span></p>
+            <p><span>{this.state.wr_datetime}</span></p>
+          </div>
+        </div>
         <div id="boardContents">
           <div dangerouslySetInnerHTML={{__html: this.state.wr_content}} />
         </div>

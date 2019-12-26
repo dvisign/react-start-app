@@ -197,9 +197,10 @@ export function getViewData(server, status, bo_table, wr_id) {
     return [
       {
         "wr_id":"5",
-        "wr_subject":"\ub300\ud615\uc778\uc1c4\uae30 Series \ucca0\ud310\uc778\uc1c4\ub77c\uc778",
+        "wr_subject":"뉴스테스트 날짜출력뉴스테스트 날짜출력뉴스테스트 날짜출력뉴스테스트 날짜출력뉴스테스트 날짜출력",
         "wr_datetime":"2019-12-20 17:15:38",
         "wr_name":"\ucd5c\uace0\uad00\ub9ac\uc790",
+        "wr_hit":"1",
         "wr_content":"<p><img src='http://dbrandtest.com/gnu/data/editor/1912/bebd60aac00ef3137b09b503878ad53c_1576547002_9791.png' ></p><p>\ub300\ud615\uc778\uc1c4\uae30 Series \ucca0\ud310\uc778\uc1c4\ub77c\uc778 \uc124\uba85</p>",
         "next_wr_id":"62",
         "prev_wr_id":"64"
