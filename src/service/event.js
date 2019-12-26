@@ -17,8 +17,8 @@ export function leaveEvent(controllDom, domChild) {
   listEl.removeClass("active native");
 }
 export function pagenations(page, index) {
-  jQuery("#navList a").removeClass("navActive");
-  jQuery("#navList > li:nth-child("+index+") > a").addClass("navActive");
+  jQuery(".navLists a").removeClass("navActive");
+  jQuery(".navLists > li:nth-child("+index+") > a").addClass("navActive");
 }
 export function pageIn(target) {
   jQuery(target).stop().animate({

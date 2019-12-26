@@ -40,7 +40,7 @@ class List extends Component {
               <div className="boardLists clear">
               {this.state.boardList.map((lists, i)=>(
                 <div className="boardItems" key={i}>
-                  <div>
+                  <div className="boardItemsContents">
                     <Link to={this.props.match.url+"/"+lists.wr_id}>
                       <div className="boardListThumbs">
                       {
@@ -50,14 +50,13 @@ class List extends Component {
                         )
                         :
                         (
-                          <img src="http://printis.co.kr/gnu/img/no_img2.jpg" alt="이미지 없음" title="이미지 없음" />
+                          <img src="http://printis.co.kr/gnu/img/no_img3.jpg" alt="이미지 없음" title="이미지 없음" />
                         )
                       } 
                       </div>
-                      <div>
-                        <p>
-                          <span>{lists.wr_subject}</span>{lists.wr_todays === true ? (<span className="newLists"><img src="http://printis.co.kr/gnu/skin/board/basic/img/icon_new.gif" alt="새로운 글" /></span>) : "" }
-                        </p>
+                      <div className="boardListSubject">
+                        <p className="wr_dateTimes">{lists.wr_datetime}</p>
+                        <p className="wr_subjects">{lists.wr_subject}{lists.wr_todays === true ? (<span className="newLists"><img src="http://printis.co.kr/gnu/skin/board/basic/img/icon_new.gif" alt="새로운 글" /></span>) : "" }</p>
                       </div>
                     </Link>
                   </div>

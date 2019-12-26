@@ -5,58 +5,67 @@
     margin-bottom: calc(6.3065% + 20px);
   }
   .boardLists {
-    text-align: center;
     min-height: 600px;
-    margin-top: 3%;
+    margin-top: 6%;
     .boardItems {
-      margin-top: 3%;
-      margin-bottom: 3%;
       float: left;
       width: 33.33333%;
-      min-height: 280px;
       padding: 0 10px;
-      @media(max-width:1200px) {
-        min-height: 250px;
-        margin-bottom: 30px;
-      }
       @media(max-width:992px) {
         width: 50%;
-        min-height: 260px;
       }
-      @media(max-width:768px) {
-        min-height: 190px;
-      }
-      @media(max-width:576px) {
-        min-height: 130px;        
-      }
-      a {
-        display: block;
+      @media(max-width:480px) {
+        float: none;
         width: 100%;
-        color:#000;
-        font-weight: 600;
-        font-size: 0.785rem;
-        .boardListThumbs {
-          margin-bottom: 40px;
-          @media(max-width:768px) {
-            margin-bottom: 20px;
-          }
-        }
-        p {
-          word-break: keep-all;
-          margin: 0 auto;
-          display: inline-block;
-          position: relative;
-          .newLists {
+      }
+      .boardItemsContents {
+        margin-top: 3%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        position: relative;
+        a {
+          display: block;
+          width: 100%;
+          color:#000;
+          font-weight: 600;
+          font-size: 0.785rem;
+          .boardListSubject {
             position: absolute;
+            width: 100%;
+            padding: 10px;
+            background-color:rgba(0,0,0,0.5);
+            color:#fff;
             bottom: 0;
-            margin-left: 7px;
-            img {
-              width: 20px;
+            .wr_dateTimes {
+              font-size: 0.8em;
+              font-weight: 400;
+              margin: 0 auto;
+            }
+            .wr_subjects {
+              margin: 0 auto;
+              position: relative;
+              .newLists {
+                position: absolute;
+                bottom: 0;
+                margin-left: 7px;
+                img {
+                  width: 20px;
+                }
+              }
             }
           }
-        }
-        img {
-          width: 100%;
+          .boardListThumbs {
+            overflow: hidden;
+            img {
+              transition: 0.5s;
+              width: 100%;
+            }
+            &:hover {
+              img {
+                transform: scale(1.2);
+              }
+            }
+          }
         }
       }
     }
@@ -65,6 +74,7 @@
 // 페이지네이션 스타일
 .pager {
   text-align: center;
+  margin-top: 3%;
   margin-bottom: 6%;
   .pagerLists {
     display: inline-block;
@@ -111,6 +121,7 @@
       .sectionSubTitles {
         font-weight: 600;
         margin-bottom: 0;
+        font-size: 1rem;
       }
     }
     #writeInfo {
@@ -135,6 +146,10 @@
     font-weight: 500;
     padding-bottom: 5.865%;
     border-bottom: 1px solid #ccc;
+    img {
+      width: auto;
+      max-width: 100%;
+    }
   }
   #boardNextPrevLink {
     margin-top: 2.432%;

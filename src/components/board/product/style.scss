@@ -28,6 +28,10 @@
       @media(max-width:576px) {
         min-height: 130px;        
       }
+      @media(max-width:480px) {
+        float: none;
+        width: 100%;
+      }
       a {
         display: block;
         width: 100%;
@@ -108,6 +112,8 @@
       margin-bottom: 5.865%;
       img {
         margin-bottom: 3.184%;
+        width:auto;
+        max-width: 100%;
       }
     }
     #productOptions {

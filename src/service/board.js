@@ -44,8 +44,8 @@ export function getList(server, status, bo_table, category, leng, sort) {
             {
               "wr_id":"4",
               "bo_table":"",
-              "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_subject":"뉴스테스트 날짜출력뉴스테스트 날짜출력...",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "true",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -53,7 +53,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"6",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -61,7 +61,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"8",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -69,7 +69,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"10",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -77,7 +77,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"12",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -85,7 +85,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"14",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -93,7 +93,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"16",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
@@ -101,7 +101,7 @@ export function getList(server, status, bo_table, category, leng, sort) {
               "wr_id":"18",
               "bo_table":"",
               "wr_subject":"\ud504\ub9b0\ud2f0\uc2a4 \ub274\uc2a4 \ud14c\uc2a4\ud2b82",
-              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x240.png",
+              "wr_img":"http://printis.co.kr/gnu/data/editor/1912/thumb-b028a30452fab706ac88fed267c2cccc_1576829732_7965_460x460.png",
               "wr_todays" : "false",
               "wr_datetime":"2019-12-20 17:15:38"
             },
