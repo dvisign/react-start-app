@@ -21,7 +21,7 @@ class News extends Component {
       <main id="newPage">
         <PageHeader 
           page="news"
-          pagebg="http://printis.cdn3.cafe24.com/about/pageheader.jpg"
+          pagebg="http://printis.cdn3.cafe24.com/news/pageheader.jpg"
           pageText="뉴스"
           title="PRINTIS 뉴스"
         />

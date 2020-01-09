@@ -31,7 +31,7 @@ class Automation extends Component {
       <main id="autoPage">
         <PageHeader 
           page="Automation"
-          pagebg="http://printis.cdn3.cafe24.com/print/pageheader.jpg"
+          pagebg="http://printis.cdn3.cafe24.com/auto/pageheader.jpg"
           pageText="자동화 장비"
           title="PRINTIS 자동화 장비"
         />
