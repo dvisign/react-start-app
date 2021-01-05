@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "cross-env": "^6.0.3",
     "jquery": "^3.4.1",
     "mdbreact": "^4.23.1",
